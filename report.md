@@ -2,7 +2,7 @@
 
 All of these phenomena cause visibility reduction because of the light interaction with airbone particles. In the case of mist and fog these particles are water particles. While in the case of haze these particles are particulate matter like dust and smoke. Note that these particles can be carried by the wind and be far away from where they were originated.
 
-Smog is made of a mixture of air pollutants. The first type of smog, "London smog" or "sulfurous smog", is made of particulate matter and the sulfur oxides coming mainly from the use of fuels like coal that releases these oxides when they are burnt. London smog is produced in a cold wheather where the pollutants mix with the fine water droplets in the air to produce the smog's dirty fog. The other type of smog is produced in sunny wheathers, it is called "Los Angeles smog" or "Photochemical smog". This smog happens due to various chemical reactions involving sunlight, nitrogen oxides and hydrocarbons coming from automobiles and other sources and ground-level ozone which is itself a product of some of these reactions.
+Smog is made of a mixture of air pollutants. The first type of smog, "London smog" or "sulfurous smog", is made of particulate matter and the sulfur oxides coming mainly from the use of fuels like coal that releases these oxides when they are burnt. London smog is produced in a cold wheather where the pollutants mix with the fine water droplets in the air to produce the smog's dirty fog. The other type of smog is produced in sunny weathers, it is called "Los Angeles smog" or "Photochemical smog". This smog happens due to various chemical reactions involving sunlight, nitrogen oxides and hydrocarbons coming from automobiles and other sources and ground-level ozone which is itself a product of some of these reactions.
 
 - [What is the difference between mist fog smog haze and vog?](https://www.quora.com/What-is-the-difference-between-mist-fog-smog-haze-and-vog)
 - [The difference between mist fog smog haze and vog](https://knowledgenuts.com/2014/11/08/the-difference-between-mist-fog-smog-haze-and-vog/)
@@ -35,3 +35,6 @@ For more information, optics is the branch of physics with studies the propertie
 - [[News article] Air pollution leads to cardiovascular diseases](https://www.sciencedaily.com/releases/2018/08/180822122829.htm)
 - [[?] Air Pollution: Everything You Need to Know. How smog, soot, greenhouse gases, and other top air pollutants are affecting the planet and your health.](https://www.nrdc.org/stories/air-pollution-everything-you-need-know)
 - [[News article] Ground-level ozone: the invisible, deadly pollutant undermining Hong Kong’s quest for clean air](https://www.scmp.com/news/hong-kong/health-environment/article/2160507/ground-level-ozone-invisible-deadly-pollutant)
+- [Ground Level Ozone: What Is It?](https://www.youtube.com/watch?v=THYoUULn_2U)
+- [The impact of PM2.5 on the human respiratory system](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4740125/)
+- [Is CO2 poisonous?](https://www.thoughtco.com/carbon-dioxide-poisonous-607545)
