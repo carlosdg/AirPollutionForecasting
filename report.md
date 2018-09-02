@@ -1,3 +1,11 @@
+# Air Pollution Prediction
+
+## Introduction
+Air pollution and its impact on human health has become an important research topic. Not only it affects our health but recent research shows that it might also affect our cognitive functions. Being able to predict the levels of the pollutors in the air would be beneficial for taking preventive measure. For example, to cancel outdoor events in case of a perjudicial air or limit the traffic to decrease the pollution to an acceptable level.
+
+- [Air Pollution Robs Us of Our Smarts and Our Lungs](https://www.nationalgeographic.com/environment/2018/09/news-air-quality-brain-cognitive-function/)
+- [The impact of PM2.5 on the human respiratory system](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4740125/)
+
 ### Haze vs fog vs mist vs smog
 
 All of these phenomena cause visibility reduction because of the light interaction with airbone particles. In the case of mist and fog these particles are water particles. While in the case of haze these particles are particulate matter like dust and smoke. Note that these particles can be carried by the wind and be far away from where they were originated.
@@ -36,5 +44,4 @@ For more information, optics is the branch of physics with studies the propertie
 - [[?] Air Pollution: Everything You Need to Know. How smog, soot, greenhouse gases, and other top air pollutants are affecting the planet and your health.](https://www.nrdc.org/stories/air-pollution-everything-you-need-know)
 - [[News article] Ground-level ozone: the invisible, deadly pollutant undermining Hong Kong’s quest for clean air](https://www.scmp.com/news/hong-kong/health-environment/article/2160507/ground-level-ozone-invisible-deadly-pollutant)
 - [Ground Level Ozone: What Is It?](https://www.youtube.com/watch?v=THYoUULn_2U)
-- [The impact of PM2.5 on the human respiratory system](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4740125/)
 - [Is CO2 poisonous?](https://www.thoughtco.com/carbon-dioxide-poisonous-607545)
