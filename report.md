@@ -1,16 +1,26 @@
-# Air Pollution Prediction
+# Air Pollution Forecasting
 
-## Introduction
+## Context
 Air pollution and its impact on human health has become an important research topic. Not only it affects our health but recent research shows that it might also affect our cognitive functions. Being able to predict the levels of the pollutors in the air would be beneficial for taking preventive measure. For example, to cancel outdoor events in case of a perjudicial air or limit the traffic to decrease the pollution to an acceptable level.
 
 - [Air Pollution Robs Us of Our Smarts and Our Lungs](https://www.nationalgeographic.com/environment/2018/09/news-air-quality-brain-cognitive-function/)
 - [The impact of PM2.5 on the human respiratory system](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4740125/)
 
+## Air pollutants
+An air pollutant is a material in the air that can harm living beings or the environment. They can be emitted to the air as result of processes such as carbon dioxide from breathing, or they can be formed as a product from the reaction of pollutants aldeary in the air, which is the case of the ground-level ozone. 
+
+Due to air pollutants harmful effects, national air quality standards have been made. Ones sets maximum levels of concentrations of specific pollutants like the _National Ambient Air Quality Standards_. While others are used to inform the population about the level of pollution in the air like the _Air quality index_.
+
+<!-- TODO: investigate about "Indoor air quality" -->
+
+- [Air Pollution](https://en.wikipedia.org/wiki/Air_pollution)
+- [EPA Criteria Air Pollutants](https://www.epa.gov/criteria-air-pollutants)
+
 ### Haze vs fog vs mist vs smog
 
 All of these phenomena cause visibility reduction because of the light interaction with airbone particles. In the case of mist and fog these particles are water particles. While in the case of haze these particles are particulate matter like dust and smoke. Note that these particles can be carried by the wind and be far away from where they were originated.
 
-Smog is made of a mixture of air pollutants. The first type of smog, "London smog" or "sulfurous smog", is made of particulate matter and the sulfur oxides coming mainly from the use of fuels like coal that releases these oxides when they are burnt. London smog is produced in a cold wheather where the pollutants mix with the fine water droplets in the air to produce the smog's dirty fog. The other type of smog is produced in sunny weathers, it is called "Los Angeles smog" or "Photochemical smog". This smog happens due to various chemical reactions involving sunlight, nitrogen oxides and hydrocarbons coming from automobiles and other sources and ground-level ozone which is itself a product of some of these reactions.
+Smog is made of a mixture of air pollutants. The first type of smog, "London smog" or "sulfurous smog", is made of particulate matter and the sulfur oxides coming mainly from the combustion of fuels like coal or oil that contains sulfur. London smog is produced in a cold wheather where the pollutants mix with the fine water droplets in the air to produce the smog's dirty fog. The other type of smog is produced in sunny weathers, it is called "Los Angeles smog" or "Photochemical smog". This smog happens due to various chemical reactions involving sunlight, nitrogen oxides and hydrocarbons coming from automobiles and other sources and ground-level ozone which is itself a product of some of these reactions.
 
 - [What is the difference between mist fog smog haze and vog?](https://www.quora.com/What-is-the-difference-between-mist-fog-smog-haze-and-vog)
 - [The difference between mist fog smog haze and vog](https://knowledgenuts.com/2014/11/08/the-difference-between-mist-fog-smog-haze-and-vog/)
