@@ -14,6 +14,7 @@ An air pollutant is a material in the air that can harm living beings or the env
 Due to outdoor air pollution harmful effects, national air quality standards have been made. Ones sets maximum levels of concentrations of specific pollutants like the _National Ambient Air Quality Standards_. While others are used to inform the population about the level of pollution in the air like the _Air quality index_.
 
 <!-- TODO: investigate about "Indoor air quality" -->
+<!-- TODO: talk about EPA, NAAQS and each "criteria pollutant" -->
 
 - [Air Pollution](https://en.wikipedia.org/wiki/Air_pollution)
 - [EPA Criteria Air Pollutants](https://www.epa.gov/criteria-air-pollutants)
