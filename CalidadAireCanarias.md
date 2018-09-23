@@ -210,23 +210,32 @@ Fuente: [Red de Control y Vigilancia de la Calidad del Aire de Canarias](http://
     </tr>
     <!-- Bloque de Las Palmas de Gran Canaria -->
     <tr>
-      <td rowspan="5">Aglomeración de Las Palmas de Gran Canaria</td>
+      <td rowspan="6">Aglomeración de Las Palmas de Gran Canaria</td>
     </tr>
     <tr>
       <td>Jinámar fase 3</td>
       <td>ENDESA</td>
+      <td>SO2; NO; NO2; NOX; PM10; PM2,5; O3; CO; DD; VV; HR; TMP; PRB</td>
     </tr>
     <tr>
       <td>Mercado Central</td>
       <td>MEDIO AMBIENTE</td>
+      <td>SO2; NOX; PM10; O3; CO; PM2,5; TMP; DD; VV; HR; PRB; RS; NO; NO2</td>
     </tr>
     <tr>
       <td>Nestor Alamo</td>
       <td>MEDIO AMBIENTE</td>
+      <td>SO2; NO; NO2; NOX; PM10; O3; TMP; DD; VV; HR; PRB; RS</td>
     </tr>
     <tr>
       <td>San Nicolás</td>
       <td>MEDIO AMBIENTE</td>
+      <td>SO2; NO; NO2; NOX; PM10; PM25; O3; CO; VV; DD; TMP; HR; RS; LL; PRB; BC</td>
+    </tr>
+    <tr>
+      <td>Torre Meteorológica CT Jinámar</td>
+      <td>DESCONOCIDO</td>
+      <td>TMP; DD; VV; PRB</td>
     </tr>
     <!-- Bloque del norte de Gran Canaria -->
     <tr>
@@ -235,46 +244,71 @@ Fuente: [Red de Control y Vigilancia de la Calidad del Aire de Canarias](http://
     <tr>
       <td>Polideportivo Afonso - Arucas</td>
       <td>MEDIO AMBIENTE</td>
+      <td>SO2; NO; NO2; NOX; CO; O3; PM10; PM2,5; DD; VV; TMP; HR; PRB; RS; LL</td>
     </tr>
     <!-- Bloque del sur de Gran Canaria -->
     <tr>
-      <td rowspan="10">Zona Sur de Gran Canaria</td>
+      <td rowspan="13">Zona Sur de Gran Canaria</td>
     </tr>
     <tr>
       <td>Agüimes</td>
       <td>ENDESA</td>
+      <td>SO2; NO; NO2; NOX; PM10; PM2,5; O3; DD; VV; TMP; HR; PRB</td>
     </tr>
     <tr>
       <td>Arinaga</td>
       <td>ENDESA</td>
+      <td>SO2; NO; NO2; NOX; PM10; PM2,5; O3; DD; VV; TMP; HR; PRB</td>
     </tr>
     <tr>
       <td>Castillo del Romeral</td>
       <td>ENDESA</td>
+      <td>SO2; NO; NO2; PM10; PM2,5; O3; CO; DD; VV; TMP; HR; PRB</td>
     </tr>
     <tr>
       <td>Pedro Lezcano</td>
       <td>ENDESA</td>
+      <td>SO2; NO; NO2; NOX; PM10; PM2,5; O3; CO; DD; VV; HR; TMP; PRB</td>
     </tr>
     <tr>
       <td>Playa del Inglés</td>
       <td>ENDESA</td>
+      <td>SO2; NO; NO2; NOX; PM10; PM2,5; O3; DD; VV; TMP; HR; PRB</td>
     </tr>
     <tr>
       <td>San Agustín</td>
       <td>ENDESA</td>
+      <td>SO2; NO; NO2; NOX; PM10; PM2,5; O3; DD; VV; TMP; HR; PRB</td>
     </tr>
     <tr>
       <td>Camping Temisas - Sta Lucía de T.</td>
       <td>ENDESA</td>
+      <td>SO2; NO; NO2; NOX; PM10; PM2,5; O3; DD; VV; TMP; HR; PRB</td>
     </tr>
     <tr>
       <td>La Loma - Telde</td>
       <td>ENDESA</td>
+      <td>SO2; NO; NO2; NOX; PM10; PM2,5; O3; CO; DD; VV; HR; TMP; PRB</td>
     </tr>
     <tr>
       <td>Parque de San Juan - Telde</td>
       <td>MEDIO AMBIENTE</td>
+      <td>SO2; NO; NO2; NOX; PM10; PM2,5; O3; CO; DD; VV; TMP; HR; RS; LL; PRB</td>
+    </tr>
+    <tr>
+      <td>Jinamar</td>
+      <td>DESCONOCIDO</td>
+      <td>SO2; NO; NO2; PM10; O3; CO; NOX</td>
+    </tr>
+    <tr>
+      <td>Sardina</td>
+      <td>DESCONOCIDO</td>
+      <td>SO2; NO; NO2; PM10; PM2,5</td>
+    </tr>
+    <tr>
+      <td>Torre Meteorológica Tirajana</td>
+      <td>DESCONOCIDO</td>
+      <td>DD; VV; TMP; HR; PBR</td>
     </tr>
     <!-- Bloque de Fuerteventura y Lanzarote -->
     <tr>
