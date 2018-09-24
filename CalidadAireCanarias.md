@@ -312,43 +312,67 @@ Fuente: [Red de Control y Vigilancia de la Calidad del Aire de Canarias](http://
     </tr>
     <!-- Bloque de Fuerteventura y Lanzarote -->
     <tr>
-      <td rowspan="10">Zona de Fuerteventura y Lanzarote</td>
+      <td rowspan="13">Zona de Fuerteventura y Lanzarote</td>
     </tr>
     <tr>
       <td>Arrecife</td>
       <td>ENDESA</td>
+      <td>SO2; NO; NO2; PM10; PM2,5; O3; CO; NOX</td>
     </tr>
     <tr>
       <td>Centro de Arte</td>
       <td>ENDESA</td>
+      <td>SO2; NO; NO2; PM10; PM2,5; O3; CO; NOX; DD; VV; TMP; HR; PRB</td>
     </tr>
     <tr>
       <td>Las Caletas - Teguise</td>
       <td>ENDESA</td>
+      <td>SO2; NO; NO2; NOX; PM10; PM2,5; O3; CO; DD; VV; TMP; HR; PRB</td>
     </tr>
     <tr>
       <td>Costa Teguise</td>
       <td>ENDESA</td>
+      <td>SO2; NO; NO2; PM10; PM2,5; O3; CO; NOX</td>
     </tr>
     <tr>
       <td>Parque de la Piedra</td>
       <td>ENDESA</td>
+      <td>SO2; NO; NO2; PM10; PM2,5; O3; CO; NOX</td>
     </tr>
     <tr>
       <td>Ciudad Deportiva - Arrecife</td>
       <td>MEDIO AMBIENTE</td>
+      <td>SO2; NO; NO2; NOX; PM10; PM2,5; O3; CO; DD; VV; TMP; HR; RS; LL; PBR</td>
     </tr>
     <tr>
       <td>Casa Palacio - Puerto del Rosario</td>
       <td>MEDIO AMBIENTE</td>
+      <td>SO2; NO; NO2; NOX; CO; O3; BEN; TOL; m-p XIL; PM10; PM2,5; DD; VV; TMP; HR; PRB; RS; LL</td>
     </tr>
     <tr>
       <td>Tefia - Puerto del Rosario</td>
       <td>MEDIO AMBIENTE</td>
+      <td>O3; PM10; DD; VV; TMP; HR; PRB; RS; LL</td>
     </tr>
     <tr>
       <td>El Charco - Puerto del Rosario</td>
       <td>ENDESA</td>
+      <td>SO2; NO; NO2; PM10; PM2,5; O3; CO</td>
+    </tr>
+    <tr>
+      <td>Portátil  Ed.Polivalente-Pto del Rosario</td>
+      <td>DESCONOCIDO</td>
+      <td>SO2; NO; NO2; NOx; DD; VV</td>
+    </tr>
+    <tr>
+      <td>Torre Meteorológica Las Salinas</td>
+      <td>DESCONOCIDO</td>
+      <td>DD; VV; TMP; HR; PBR</td>
+    </tr>
+    <tr>
+      <td>Torre Meteorológica Punta Grande</td>
+      <td>DESCONOCIDO</td>
+      <td>DD; VV; TMP; HR; PBR</td>
     </tr>
     <!-- Bloque de La Palma, La Gomera y El Hierro -->
     <tr>
@@ -357,34 +381,42 @@ Fuente: [Red de Control y Vigilancia de la Calidad del Aire de Canarias](http://
     <tr>
       <td>Echedo - Valverde</td>
       <td>MEDIO AMBIENTE</td>
+      <td>O3; H2S; PM10; DD; VV; TMP; HR; PRB; RS; LL</td>
     </tr>
     <tr>
       <td>El Pilar - Sta Cruz de La Palma</td>
       <td>ENDESA</td>
+      <td>SO2; NO; NO2; PM10; NOX; PM2,5; CO; O3; VV; DD; TMP; HR; PRB</td>
     </tr>
     <tr>
       <td>San Antonio - Breña Baja</td>
       <td>MEDIO AMBIENTE</td>
+      <td>SO2; NO; NO2; NOX; PM10; O3; PM2,5; CO; DD; VV; TMP; HR; PRB; RS; LL</td>
     </tr>
     <tr>
       <td>La Grama - Breña Alta</td>
       <td>ENDESA</td>
+      <td>SO2; NO; NO2; NOX; PM10; PM2,5; CO; O3; VV; DD; TMP; HR; PRB</td>
     </tr>
     <tr>
       <td>Las Balsas - S. Andrés y Sauces</td>
       <td>MEDIO AMBIENTE</td>
+      <td>O3; PM10; DD; VV; TMP; HR; PRB; RS; LL</td>
     </tr>
     <tr>
       <td>Las Galanas - S.S Gomera</td>
       <td>ENDESA</td>
+      <td>SO2; NO; NO2; NOX; O3; PM10; PM2.5; DD; VV; TMP; HR; PRB</td>
     </tr>
     <tr>
       <td>Centro de Visitantes - S.S Gomera</td>
       <td>ENDESA</td>
+      <td>SO2; HR; TMP</td>
     </tr>
     <tr>
       <td>Residencia Escolar - S.S Gomera</td>
       <td>MEDIO AMBIENTE</td>
+      <td>SO2; NO; NO2; NOX; O3; PM10; DD; VV; TMP; HR; PRB; RS; LL</td>
     </tr>
   </tbody>
 </table>
