@@ -7,7 +7,7 @@ En la sociedad actual es habitual la combustión de combustibles fósiles para g
 La calidad del aire es un indicador de la concentración de agentes contaminantes en el aire y de su peligro para la salud de las personas. En Canarias, se dispone de varias estaciones automáticas que toman mediciones sobre los parámetros más importantes para determinar la calidad del aire como el material particularizado, ozono troposférico, azufre, dirección y velocidad del viento, etc. Hay estaciones que pertenecen a empresas privadas, en concreto a ENDESA y CEPSA, y estaciones que pertenecen al gobierno. Los datos de estas estaciones son tratados por el Centro de Evaluación y Gestión de la Calidad del Aire (CEGCA) para que, en caso de que el nivel de calidad del aire incumpla la normativa, se activen los protocolos adecuados para dismunir emisiones contaminantes.
 
 
-<!-- Fuente: [Red de Control y Vigilancia de la Calidad del Aire de Canarias]     (http://www.gobiernodecanarias.org/medioambiente/calidaddelaire/inicio.do) -->
+<!-- Fuente: [Red de Control y Vigilancia de la Calidad del Aire de Canarias](http://www.gobiernodecanarias.org/medioambiente/calidaddelaire/inicio.do) -->
 
 ## Información sobre los parámetros
 
@@ -26,8 +26,8 @@ A continuación se muestra la información acerca de los parámetros que se reco
  | NO2 | Concentracion de NO2 | µg/m³ |
  | NOX | Concentracion de NOX | µg/m³ |
  | O3 | Concentración de O3 | µg/m³ |
- | PM1 | Particulas en suspensión &lt; 1um | µg/m³ |
- | PM10 | Particulas en suspensión &lt; 10um | µg/m³ |
+ | PM1 | Particulas en suspensión < 1um | µg/m³ |
+ | PM10 | Particulas en suspensión < 10um | µg/m³ |
  | PM2.5 | Concentración de PM2,5 | µg/m³ |
  | PRB | Presion barometrica | mb |
  | RS | Radiacion solar | W/m² |
