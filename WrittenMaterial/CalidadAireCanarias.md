@@ -145,3 +145,189 @@ A continuación se muestra la información acerca de los parámetros que se reco
 | Las Balsas - S. Andrés y Sauces | MEDIO AMBIENTE | O3; PM10; DD; VV; TMP; HR; PRB; RS; LL |
 | Las Galanas - S.S Gomera | ENDESA | SO2; NO; NO2; NOX; O3; PM10; PM2.5; DD; VV; TMP; HR; PRB |
 | Centro de Visitantes - S.S Gomera | ENDESA | SO2; HR; TMP |
+
+## Coordenadas geográficas de las estaciones (en JSON)
+
+De momento sólo están las de las zonas de Tenerife
+
+```json
+[
+  {
+    "zone": "Santa Cruz - La Laguna",
+    "stations": [
+      {
+        "name": "Casa Cuna",
+        "lat": -16.27769219311504,
+        "long": 28.45103088037192,
+        "alt": 50
+      },
+      {
+        "name": "Tena Artigas - Sta Cruz de TF",
+        "lat": -16.27685561780176,
+        "long": 28.45537560999706,
+        "alt": 0
+      },
+      {
+        "name": "Vuelta Los Pájaros",
+        "lat": -16.27697222222222,
+        "long": 28.462,
+        "alt": 50
+      },
+      {
+        "name": "Depósito de Tristán - Santa Cruz de TF",
+        "lat": -16.27877561502283,
+        "long": 28.45815968532356,
+        "alt": 0
+      },
+      {
+        "name": "Unidad Móvil 3 - Piscina Municipal Sta Cruz de TF",
+        "lat": -16.26340423894506,
+        "long": 28.45791579546199,
+        "alt": 0
+      },
+      {
+        "name": "García Escámez - Sta Cruz de TF",
+        "lat": -16.27184954317193,
+        "long": 28.45664139423877,
+        "alt": 0
+      },
+      {
+        "name": "Parque La Granja - Sta Cruz de TF",
+        "lat": -16.26487493264499,
+        "long": 28.46300210751911,
+        "alt": 0
+      },
+      {
+        "name": "Tío Pino",
+        "lat": -16.27012462756456,
+        "long": 28.45925503570103,
+        "alt": 0
+      },
+      {
+        "name": "Palmetum",
+        "lat": -16.25852644443512,
+        "long": 28.452545726989584,
+        "alt": 0
+      },
+      {
+        "name": "Bomberos",
+        "lat": -16.26097493125278,
+        "long": 28.45828864775618,
+        "alt": 0
+      },
+      {
+        "name": "Comisaría",
+        "lat": -16.25866186061195,
+        "long": 28.45912395381277,
+        "alt": 0
+      },
+      {
+        "name": "Comandancia",
+        "lat": -16.2456057616887,
+        "long": 28.47720124167907,
+        "alt": 0
+      },
+      {
+        "name": "Hacienda",
+        "lat": -16.24870801361327,
+        "long": 28.46323011938556,
+        "alt": 0
+      },
+      {
+        "name": "Tome Cano",
+        "lat": -16.26186591001509,
+        "long": 28.4621688991889,
+        "alt": 50
+      }
+    ]
+  },
+  {
+    "zone": "Tenerife North",
+    "stations": [
+      {
+        "name": "La Zamora",
+        "lat": -16.57072474718117,
+        "long": 28.3831334121515,
+        "alt": 50
+      }
+    ]
+  },
+  {
+    "zone": "Tenerife South",
+    "stations": [
+      {
+        "name": "Barranco Hondo",
+        "lat": -16.3581166775973,
+        "long": 28.39342430257058,
+        "alt": 50
+      },
+      {
+        "name": "La Guancha - Candelaria",
+        "lat": -16.36833427699988,
+        "long": 28.38016131594777,
+        "alt": 0
+      },
+      {
+        "name": "Caletillas",
+        "lat": -16.36193673089008,
+        "long": 28.37672185381682,
+        "alt": 50
+      },
+      {
+        "name": "Igueste",
+        "lat": -16.37197069941999,
+        "long": 28.38054612249282,
+        "alt": 50
+      },
+      {
+        "name": "La Buzanada",
+        "lat": -16.65275205038472,
+        "long": 28.07264560673482,
+        "alt": 50
+      },
+      {
+        "name": "El Rio",
+        "lat": -16.52369883375512,
+        "long": 28.14507452830099,
+        "alt": 50
+      },
+      {
+        "name": "Las Galletas",
+        "lat": -16.65582224157534,
+        "long": 28.00778986209971,
+        "alt": 50
+      },
+      {
+        "name": "Granadilla",
+        "lat": -16.57757403405965,
+        "long": 28.11249291171923,
+        "alt": 50
+      },
+      {
+        "name": "El Médano",
+        "lat": -16.53603007019015,
+        "long": 28.04732410738179,
+        "alt": 50
+      },
+      {
+        "name": "San Isidro",
+        "lat": -16.55983699771885,
+        "long": 28.08003389965855,
+        "alt": 50
+      },
+      {
+        "name": "San Miguel de Tajao",
+        "lat": -16.47161086862779,
+        "long": 28.11139253073869,
+        "alt": 50
+      },
+      {
+        "name": "Arafo",
+        "lat": -16.39991556602504,
+        "long": 28.33734903726858,
+        "alt": 50
+      }
+    ]
+  }
+]
+```
