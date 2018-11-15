@@ -1,3 +1,10 @@
+"""
+Script to parse KMZ files to extract the geographic coordinates of the Canary
+Islands' air quality stations.
+
+Usage: python parser.py <first_kmz_file_path> <second_kmz_file_path>...
+"""
+
 from zipfile import ZipFile
 import re
 import sys
