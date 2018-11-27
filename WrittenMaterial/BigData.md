@@ -8,17 +8,7 @@ Desde la Antigüedad se ha hecho uso de la recogida de datos y extracción de in
 
 En 1890 se estimaba que el censo de Estados Unidos tomaría alrededor de 10 años en ser recogido y procesado. Para cuando se terminase tendrían que empezar el siguiente censo con una mayor población y llevando, por tanto, todavía más tiempo. Fue gracias a la máquina de Herman Hollerith, posterior fundador de IBM, que se pudo semi-automatizar el proceso para terminar el censo a tiempo [3]. El tiempo exacto que tomó varía según la fuente que se consulte, algunas hablan de unos pocos meses y otras de unos pocos años, pero, en general, gracias a la automatización se disminuyó notablemente el tiempo para procesar una gran cantidad de datos.
 
-Aunque la capacidad de cálculo de la máquina de Hollerith era muy limitado, en poco tiempo surgieron los computadores actuales, máquinas capaces de realizar cualquier cálculo. A principios del siglo XX David Hilbert presentó un conjunto de problemas matemáticos sin resolver que influenció parte de la investigación matemática del resto del siglo. En concreto el problema de la decisión (_Entscheidungsproblem_) motivó varias investigaciones como las publicadas en 1936 por Alonzo Church y Alan Turing. Ambos demostraron de manera independiente que era imposible dar una solución general al problema. Turing para ello definió lo que hoy se conoce como una máquina de Turing, un modelo matemático capaz de representar cualquier algoritmo, siendo la base sobre la que se constituye las Ciencias de la Computación.
-
-
-TODO: (guión)
-- Antes de la estadística
-- Después de la estadística (aún cálculos a manos)
-- Después de los computadores (Datos guardados en sistemas de archivos, cada
-  aplicación usando archivos con su formato elegido)
-- Después de las bases de datos relacionales (Mejoró la manera de guardar y
-  acceder a datos estructurados)
-- Después de la web, iot y otros -> big data
+Aunque la capacidad de procesamiento de la máquina de Hollerith era muy limitado respecto a lo que podía hacer, en poco tiempo surgieron los computadores actuales, máquinas capaces de realizar cualquier cálculo. A principios del siglo XX David Hilbert presentó un conjunto de problemas matemáticos sin resolver que influenció parte de la investigación matemática del resto del siglo. En concreto el problema de la decisión (_Entscheidungsproblem_) motivó varias investigaciones como las publicadas en 1936 por Alonzo Church y Alan Turing que demostraron, de manera independiente, que era imposible dar una solución general al problema. Para ello Turing definió lo que hoy se conoce como una máquina de Turing, un modelo matemático capaz de representar cualquier algoritmo, siendo la base sobre la que se constituye las Ciencias de la Computación.
 
 ## Referencias
 
