@@ -4,9 +4,14 @@ El manejo y análisis de datos supone afrontar grandes retos pero, a cambio, pue
 
 __La información permite tomar mejores decisiones al reducir incertidumbre__ y su extracción a partir de datos también es de suma utilidad y un proceso habitual en el día a día de las personas. Por ejemplo, datos como qué másters sobre Ingeniería Informática existen, dónde habría que estudiar o qué se aprendería, serían de utilidad en el contexto de elegir un máster sobre Ingeniería Informática. Analizando estos datos se puede obtener información útil para la decisión como saber cuál es la opción más económica, saber en cuál se imparten asignaturas que gusten más al decisor, etc.
 
-Desde la Antigüedad se ha hecho uso de la recogida de datos y extracción de información para la toma de decisiones. En la Antigua Roma se realizaban censos donde períodicamente se recogían datos de la población para decidir cuestiones como cuánto le correspondía pagar de impuestos a cada individuo y cuál era su clase en el servicio militar [2]. Con el desarrollo de las matemáticas y, en particular, de la estadística, se han ido creando y refinando técnicas para manejar y analizar datos. Sin embargo, hasta el surgimiento de los computadores toda la recogida y procesamiento ha tenido que ser llevada a cabo por personas, requiriendo mucho tiempo.
+Desde la Antigüedad se ha hecho uso de la recogida de datos y extracción de información para la toma de decisiones. En la Antigua Roma se realizaban censos donde períodicamente se recogían datos de la población para decidir cuestiones como cuánto le correspondía pagar de impuestos a cada individuo y cuál era su clase en el servicio militar [2]. Con el desarrollo de las matemáticas y, en particular, de la estadística, se han ido creando y refinando técnicas para manejar y analizar datos. Sin embargo, toda la recogida y procesamiento tenía que ser llevada a cabo por personas, requiriendo mucho tiempo.
 
-TODO:
+En 1890 se estimaba que el censo de Estados Unidos tomaría alrededor de 10 años en ser recogido y procesado. Para cuando se terminase tendrían que empezar el siguiente censo con una mayor población y llevando, por tanto, todavía más tiempo. Fue gracias a la máquina de Herman Hollerith, posterior fundador de IBM, que se pudo semi-automatizar el proceso para terminar el censo a tiempo [3]. El tiempo exacto que tomó varía según la fuente que se consulte, algunas hablan de unos pocos meses y otras de unos pocos años, pero, en general, gracias a la automatización se disminuyó notablemente el tiempo para procesar una gran cantidad de datos.
+
+A principios del siglo XX David Hilbert presentó un conjunto de problemas matemáticos sin resolver que influenció en parte de la investigación matemática del resto del siglo. En concreto el problema de la decisión (_Entscheidungsproblem_) fue respondido en 1936 por Alonzo Church y Alan Turing en publicaciones independientes demostrando que una solución general era imposible. Turing, en su trabajo, definió lo que hoy se conoce como una máquina de Turing, un modelo matemático capaz de representar cualquier algoritmo y, aunque otros autores como también han definido modelos equivalentes como el cálculo lambda de Church, la máquina de Turing constituye la base de las Ciencias de la Computación debido a ser de los primeros publicados y a su sencillez.
+
+
+TODO: (guión)
 - Antes de la estadística
 - Después de la estadística (aún cálculos a manos)
 - Después de los computadores (Datos guardados en sistemas de archivos, cada
@@ -23,6 +28,8 @@ immunotherapy responses. ScienceDaily. Retrieved November 25, 2018 from
 
 - [2] El reclutamiento. Universitat de València. Recogido el 26 de Noviembre de 2018 de [https://www.uv.es/alabau/gye/recluta.htm](https://www.uv.es/alabau/gye/recluta.htm)
 
+- [3] Herman Hollerith. Columbia University. (Most recent update: Thu Oct 18 09:40:48 2018). Retrieved November 27, 2018 from [http://www.columbia.edu/cu/computinghistory/hollerith.html](http://www.columbia.edu/cu/computinghistory/hollerith.html)
+
 ## Fuentes Adicionales
 
 - Big Data For Dummies, ISBN: 9781118644171, Marcia Kaufman, Dr. Fern Halper,
@@ -32,3 +39,4 @@ immunotherapy responses. ScienceDaily. Retrieved November 25, 2018 from
 - [Breve historia del análisis de datos](https://www.flydata.com/blog/a-brief-history-of-data-analysis/)
 - [Cómo hace uso Netflix del Big Data](https://medium.com/swlh/how-netflix-uses-big-data-20b5419c1edf)
 - [El papel de los censores en la Antigua Roma](https://www.ancient.eu/censor/)
+- [Breve explicación de cómo funcionaba la máquina de Hollerith](https://www.youtube.com/watch?v=9HXjLW7v-II)
