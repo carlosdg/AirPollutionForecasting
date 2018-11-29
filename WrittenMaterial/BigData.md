@@ -8,7 +8,9 @@ Desde la Antigüedad se ha hecho uso de la recogida de datos y extracción de in
 
 En 1890 se estimaba que el censo de Estados Unidos tomaría alrededor de 10 años en ser recogido y procesado. Para cuando se terminase tendrían que empezar el siguiente censo con una mayor población y llevando, por tanto, todavía más tiempo. Fue gracias a la máquina de Herman Hollerith, posterior fundador de IBM, que se pudo semi-automatizar el proceso para terminar el censo a tiempo [3]. El tiempo exacto que tomó varía según la fuente que se consulte, algunas hablan de unos pocos meses y otras de unos pocos años, pero, en general, gracias a la automatización se disminuyó notablemente el tiempo para procesar una gran cantidad de datos.
 
-Aunque la capacidad de procesamiento de la máquina de Hollerith era muy limitado respecto a lo que podía hacer, en poco tiempo surgieron los computadores actuales, máquinas capaces de realizar cualquier cálculo. A principios del siglo XX David Hilbert presentó un conjunto de problemas matemáticos sin resolver que influenció parte de la investigación matemática del resto del siglo. En concreto el problema de la decisión (_Entscheidungsproblem_) motivó varias investigaciones como las publicadas en 1936 por Alonzo Church y Alan Turing que demostraron, de manera independiente, que era imposible dar una solución general al problema. Para ello Turing definió lo que hoy se conoce como una máquina de Turing, un modelo matemático capaz de representar cualquier algoritmo, siendo la base sobre la que se constituye las Ciencias de la Computación.
+Aunque la capacidad de procesamiento de la máquina de Hollerith era muy limitado respecto a lo que podía hacer, en poco tiempo surgieron los computadores actuales, máquinas capaces de realizar cualquier cálculo. A principios del siglo XX David Hilbert presentó un conjunto de problemas matemáticos sin resolver que influenció parte de la investigación matemática del resto del siglo. En concreto el problema de la decisión (_Entscheidungsproblem_) [4] motivó varias investigaciones como las publicadas en 1936 por Alonzo Church y Alan Turing que demostraron, de manera independiente, que era imposible dar una solución general al problema. Para ello Turing definió lo que hoy se conoce como una máquina de Turing, un modelo matemático capaz de representar cualquier algoritmo, siendo la base sobre la que se constituye las Ciencias de la Computación.
+
+A partir de entonces se tuvo el conocimiento necesario para crear máquinas físicas Turing completas. Es decir, máquinas computacionalmente equivalente a una Máquina de Turing Universal (salvo restricciones técnicas como la necesidad de una memoria infinita). Siendo una Máquina de Turing Universal una Máquina de Turing capaz de simular cualquier otra dada como entrada.
 
 ## Referencias
 
@@ -20,6 +22,8 @@ immunotherapy responses. ScienceDaily. Retrieved November 25, 2018 from
 
 - [3] Herman Hollerith. Columbia University. (Most recent update: Thu Oct 18 09:40:48 2018). Retrieved November 27, 2018 from [http://www.columbia.edu/cu/computinghistory/hollerith.html](http://www.columbia.edu/cu/computinghistory/hollerith.html)
 
+- [4] Decision problem in a few sentences. David Joyce. (Most recent update: Feb 6, 2016). Retrieved November 29, 2018 from [https://www.quora.com/How-can-I-explain-Entscheidungs-problem-in-a-few-sentences-to-people-without-confusing-people/answer/David-Joyce-11](https://www.quora.com/How-can-I-explain-Entscheidungs-problem-in-a-few-sentences-to-people-without-confusing-people/answer/David-Joyce-11)
+
 ## Fuentes Adicionales
 
 - Big Data For Dummies, ISBN: 9781118644171, Marcia Kaufman, Dr. Fern Halper,
@@ -30,3 +34,4 @@ immunotherapy responses. ScienceDaily. Retrieved November 25, 2018 from
 - [Cómo hace uso Netflix del Big Data](https://medium.com/swlh/how-netflix-uses-big-data-20b5419c1edf)
 - [El papel de los censores en la Antigua Roma](https://www.ancient.eu/censor/)
 - [Breve explicación de cómo funcionaba la máquina de Hollerith](https://www.youtube.com/watch?v=9HXjLW7v-II)
+- [Computer Fundamentals. Lecture 2. Dr Robert Harle. Cambridge University](https://www.cl.cam.ac.uk/teaching/1314/CompFund/Lecture2.pdf)
