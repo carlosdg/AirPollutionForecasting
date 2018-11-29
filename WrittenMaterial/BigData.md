@@ -10,9 +10,13 @@ En 1890 se estimaba que el censo de Estados Unidos tomaría alrededor de 10 año
 
 Aunque la capacidad de procesamiento de la máquina de Hollerith era muy limitado respecto a lo que podía hacer, en poco tiempo surgieron los computadores actuales, máquinas capaces de realizar cualquier cálculo. A principios del siglo XX David Hilbert presentó un conjunto de problemas matemáticos sin resolver que influenció parte de la investigación matemática del resto del siglo. En concreto el problema de la decisión (_Entscheidungsproblem_) [4] motivó varias investigaciones como las publicadas en 1936 por Alonzo Church y Alan Turing que demostraron, de manera independiente, que era imposible dar una solución general al problema. Para ello Turing definió lo que hoy se conoce como una máquina de Turing, un modelo matemático capaz de representar cualquier algoritmo, siendo la base sobre la que se constituye las Ciencias de la Computación.
 
-A partir de entonces se tuvo el conocimiento necesario para crear máquinas físicas Turing completas. Es decir, máquinas computacionalmente equivalente a una Máquina de Turing Universal (salvo restricciones técnicas como la necesidad de una memoria infinita). Siendo una Máquina de Turing Universal una Máquina de Turing capaz de simular cualquier otra dada como entrada.
+A partir de entonces se tuvo el conocimiento necesario para crear máquinas físicas Turing completas. Es decir, máquinas computacionalmente equivalente a una Máquina de Turing Universal (salvo restricciones técnicas como la necesidad de una memoria infinita). Siendo una Máquina de Turing Universal una Máquina de Turing capaz de simular cualquier otra dada como entrada. Una desventaja de los primeros modelos de máquinas es que tenían que ser recableados para poder ejecutar una serie de cálculos distintos [5]. Sin embargo, gracias a la arquitectura de computadores de John von Neumann, se definió un modelo de máquina física capaz de almacenar en la memoria no sólo datos, sino programas (las series de cálculos a realizar).
 
-Tras muchos avances en un corto período de tiempo, las computadoras cada vez costaban menos, ocupaban un volumen menor y eran capaces de hacer cada vez más cálculos por unidad de tiempo. A finales del siglo XX ya había surgido la familia de protocolos TCP/IP para conectar redes de ordenadores, sin embargo, los investigadores todavía no disponían de una manera centralizada de compartir sus hallazgos a cualquier persona en el mundo que le interesase. Esto fue lo que motivó a Tim Berners-Lee a desarrollar los cimientos de la _World Wide Web_ [5].
+Con el paso del tiempo, los avances tecnológicos permitieron que las computadoras cada vez costaran menos, ocuparan un volumen mejor y fueran capaces de realizar más cálculos por unidad de tiempo, lo que permitió que surgieran las primeras computadoras comerciales. En este contexto, empresas que usaban computadoras se encontraron con que el formato de los datos dependía de los programas que usasen, complicando el análisis de datos y su uso como entrada para programas distintos.
+
+TODO: mencionar el modelo relacional
+
+A finales del siglo XX ya había surgido la familia de protocolos TCP/IP para conectar redes de ordenadores, sin embargo, los investigadores todavía no disponían de una manera centralizada de compartir sus hallazgos a cualquier persona en el mundo que le interesase. Esto fue lo que motivó a Tim Berners-Lee a desarrollar los cimientos de la _World Wide Web_ [6].
 
 ## Referencias
 
@@ -26,7 +30,9 @@ immunotherapy responses. ScienceDaily. Retrieved November 25, 2018 from
 
 - [4] Decision problem in a few sentences. David Joyce. (Most recent update: Feb 6, 2016). Retrieved November 29, 2018 from [https://www.quora.com/How-can-I-explain-Entscheidungs-problem-in-a-few-sentences-to-people-without-confusing-people/answer/David-Joyce-11](https://www.quora.com/How-can-I-explain-Entscheidungs-problem-in-a-few-sentences-to-people-without-confusing-people/answer/David-Joyce-11)
 
-- [5] History of the web. Retrieved November 29, 2018 from [https://webfoundation.org/about/vision/history-of-the-web/](https://webfoundation.org/about/vision/history-of-the-web/)
+- [5] ENIAC. Paul A. Freiberger, Michael R. Swaine. (Most recent update: Oct 26, 2018). Retrieved November 29, 2018 from [https://www.britannica.com/technology/ENIAC](https://www.britannica.com/technology/ENIAC)
+
+- [6] History of the web. Retrieved November 29, 2018 from [https://webfoundation.org/about/vision/history-of-the-web/](https://webfoundation.org/about/vision/history-of-the-web/)
 
 ## Fuentes Adicionales
 
