@@ -12,6 +12,8 @@ Aunque la capacidad de procesamiento de la máquina de Hollerith era muy limitad
 
 A partir de entonces se tuvo el conocimiento necesario para crear máquinas físicas Turing completas. Es decir, máquinas computacionalmente equivalente a una Máquina de Turing Universal (salvo restricciones técnicas como la necesidad de una memoria infinita). Siendo una Máquina de Turing Universal una Máquina de Turing capaz de simular cualquier otra dada como entrada.
 
+Tras muchos avances en un corto período de tiempo, las computadoras cada vez costaban menos, ocupaban un volumen menor y eran capaces de hacer cada vez más cálculos por unidad de tiempo. A finales del siglo XX ya había surgido la familia de protocolos TCP/IP para conectar redes de ordenadores, sin embargo, los investigadores todavía no disponían de una manera centralizada de compartir sus hallazgos a cualquier persona en el mundo que le interesase. Esto fue lo que motivó a Tim Berners-Lee a desarrollar los cimientos de la _World Wide Web_ [5].
+
 ## Referencias
 
 - [1] Johns Hopkins Medicine. (2018, August 8). Using big data to predict
@@ -23,6 +25,8 @@ immunotherapy responses. ScienceDaily. Retrieved November 25, 2018 from
 - [3] Herman Hollerith. Columbia University. (Most recent update: Thu Oct 18 09:40:48 2018). Retrieved November 27, 2018 from [http://www.columbia.edu/cu/computinghistory/hollerith.html](http://www.columbia.edu/cu/computinghistory/hollerith.html)
 
 - [4] Decision problem in a few sentences. David Joyce. (Most recent update: Feb 6, 2016). Retrieved November 29, 2018 from [https://www.quora.com/How-can-I-explain-Entscheidungs-problem-in-a-few-sentences-to-people-without-confusing-people/answer/David-Joyce-11](https://www.quora.com/How-can-I-explain-Entscheidungs-problem-in-a-few-sentences-to-people-without-confusing-people/answer/David-Joyce-11)
+
+- [5] History of the web. Retrieved November 29, 2018 from [https://webfoundation.org/about/vision/history-of-the-web/](https://webfoundation.org/about/vision/history-of-the-web/)
 
 ## Fuentes Adicionales
 
