@@ -12,9 +12,9 @@ Aunque la capacidad de procesamiento de la máquina de Hollerith era muy limitad
 
 A partir de entonces se tuvo el conocimiento necesario para crear máquinas físicas Turing completas. Es decir, máquinas computacionalmente equivalente a una Máquina de Turing Universal (salvo restricciones técnicas como la necesidad de una memoria infinita). Siendo una Máquina de Turing Universal una Máquina de Turing capaz de simular cualquier otra dada como entrada. Una desventaja de los primeros modelos de máquinas físicas es que tenían que ser recableadas para poder ejecutar una serie de cálculos distintos [5]. Sin embargo, gracias a la arquitectura de computadores de John von Neumann, se definió un modelo de máquina física capaz de almacenar en la memoria no sólo datos, sino programas (las series de cálculos a realizar).
 
-Con el paso de un corto período de tiempo y con el foco puesto en hacer las computadoras cada vez más rápidas se lograron grandes avances tecnológicos: se consigió que las computadoras cada vez ocuparan un volumen menor, fueran capaces de realizar más operaciones por unidad de tiempo y costaran menos. Sin embargo, el acceso y almacenamiento de datos seguía suponiendo un desafío: empresas guardaban datos estructurados de sus clientes como, por ejemplo, tuplas de nombre, apellidos y lugar de residencia. Pero los programadores tenían que trabajar directamente con ficheros, los cuales no imponen ninguna estructura y entre ficheros puede haber cualquier relación lógica. Esto hacía que fuera fácil cometer errores y difícil saber la relación que había entre los datos. Por ello surgieron los modelos de base de datos y los sistemas gestores de bases de datos que, para mejorar esta situación, proveyeron una abstracción entre la estructura lógica de los datos y el almacenamiento de datos en ficheros.
+Con el paso de un corto período de tiempo y con el foco puesto en hacer las computadoras cada vez más rápidas se lograron grandes avances tecnológicos: se consigió que las computadoras cada vez ocuparan un volumen menor, fueran capaces de realizar más operaciones por unidad de tiempo y costaran menos. Sin embargo, el acceso y almacenamiento de datos seguía suponiendo un desafío: empresas guardaban datos estructurados de sus clientes como, por ejemplo, tuplas de nombre, apellidos y lugar de residencia. Pero los programadores tenían que trabajar directamente con ficheros, los cuales no imponen ninguna estructura y entre ficheros puede haber cualquier relación lógica. Esto hacía que fuera fácil cometer errores y difícil saber la relación que había entre los datos. Por ello surgieron los modelos de base de datos y los sistemas gestores de bases de datos que, para mejorar esta situación, proveyeron una abstracción entre la estructura lógica de los datos y el almacenamiento de datos en ficheros [6].
 
-A finales del siglo XX ya había surgido la familia de protocolos TCP/IP para conectar redes de ordenadores. Sin embargo, los investigadores todavía no disponían de una manera centralizada de compartir sus hallazgos a cualquier persona en el mundo que le pudiese interesar. Esto fue lo que motivó a Tim Berners-Lee a desarrollar los cimientos de la _World Wide Web_ [6].
+A finales del siglo XX ya había surgido la familia de protocolos TCP/IP para conectar redes de ordenadores. Sin embargo, los investigadores todavía no disponían de una manera centralizada de compartir sus hallazgos a cualquier persona en el mundo que le pudiese interesar. Esto fue lo que motivó a Tim Berners-Lee a desarrollar los cimientos de la _World Wide Web_ [7].
 
 ## Referencias
 
@@ -30,7 +30,9 @@ A finales del siglo XX ya había surgido la familia de protocolos TCP/IP para co
 
 - [5] ENIAC. Paul A. Freiberger, Michael R. Swaine. (Most recent update: Oct 26, 2018). Retrieved November 29, 2018 from [https://www.britannica.com/technology/ENIAC](https://www.britannica.com/technology/ENIAC)
 
-- [6] History of the web. Retrieved November 29, 2018 from [https://webfoundation.org/about/vision/history-of-the-web/](https://webfoundation.org/about/vision/history-of-the-web/)
+- [6] Exploring Early Database Models. (Most recent update: Jun 8, 2015). Retrieved December 2, 2018 from [https://mariadb.com/kb/en/library/exploring-early-database-models/](https://mariadb.com/kb/en/library/exploring-early-database-models/)
+
+- [7] History of the web. Retrieved November 29, 2018 from [https://webfoundation.org/about/vision/history-of-the-web/](https://webfoundation.org/about/vision/history-of-the-web/)
 
 ## Fuentes Adicionales
 
