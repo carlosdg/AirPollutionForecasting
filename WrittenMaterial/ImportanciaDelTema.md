@@ -1,0 +1,3 @@
+La presencia de materia intrusa en el aire puede resultar dañina para los seres vivos al inhalarla. Por ejemplo, cuando una persona inhala partículas de monóxido de carbono (CO), al llegar a la sangre estas partículas se unen a la hemoglobina y, como esta unión es mucho más fuerte que con el oxígeno, se disminuye la capacidad del cuerpo de transportar oxígeno [1]. En caso de estar expuesto a una fuente continua puede producir la muerte en minutos.
+
+[1] What is the chemical reaction that occurs in the body when carbon monoxide is inhaled? (Sep 24, 2008). Retrieved December 3, 2018 from [http://scienceline.ucsb.edu/getkey.php?key=1856](http://scienceline.ucsb.edu/getkey.php?key=1856)
