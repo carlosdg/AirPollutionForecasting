@@ -16,6 +16,16 @@ Con el paso de un corto período de tiempo y con el foco puesto en hacer las com
 
 A finales del siglo XX ya había surgido la familia de protocolos TCP/IP para conectar redes de ordenadores. Sin embargo, los investigadores todavía no disponían de una manera centralizada de compartir sus hallazgos a cualquier persona en el mundo que le pudiese interesar. Esto fue lo que motivó a Tim Berners-Lee a desarrollar los cimientos de la _World Wide Web_ [7].
 
+## Big Data
+
+Gracias a la web, a que las computadoras han ido siendo accesibles a un público cada vez más amplio y al uso de diferentes sensores para recoger datos, surgieron grandes empresas como Google, Facebook, Amazon o Netflix, ejemplos de empresas con un volumen de datos ingentes, incesantes y sin una estructura fija haciendo que extraer valor de ellos con las técnicas desarrolladas hasta el momento fuera difícil. El término _Big Data_ surgió para dar nombre a este fenómeno, en otras palabras, hace referencia a conjuntos de datos con, al menos, las siguientes características:
+
+- Un gran **volumen** esperado de datos. Como "grande" es relativo, se refiere a un volumen suficientemente grande como para plantearse que el sistema usado para el almacenamiento pueda no ser suficiente si no es escalable.
+
+- Los datos tienen una estructura **variable**. Pueden haber algunos datos con un formato específico como tablas de números y pueden haber otros datos sin un formato determinado como audio o video.
+
+- Una alta frecuencia de llegada, haciendo que sea necesario un tratamiento de los datos a una alta **velocidad**.
+
 ## Referencias
 
 - [1] Johns Hopkins Medicine. (2018, August 8). Using big data to predict
@@ -36,7 +46,7 @@ A finales del siglo XX ya había surgido la familia de protocolos TCP/IP para co
 
 ## Fuentes Adicionales
 
-- Big Data For Dummies, ISBN: 9781118644171, Marcia Kaufman, Dr. Fern Halper,
+- Big Data Technology Fundamentals Online (Released 2016). Course at [AWS Training](https://www.aws.training/learningobject/curriculum?id=11070).
 - [Datos vs Información](https://www.researchgate.net/post/What_is_the_difference_between_data_and_information/1)
 - [Historia de la estadística](https://en.wikipedia.org/wiki/History_of_statistics)
   Alan Nugent, Judith Hurwitz
