@@ -11,9 +11,9 @@ Para asegurarse que las concentraciones de los contaminantes en la atmósfera no
 Aunque las legislaciones difieran entre países, la contaminación de la atmósfera es un peligro para todos porque, una vez en la atmósfera, los contaminantes pueden viajar por acción del viento a otras regiones. Por ello, la OMS provee unas directrices generales acerca de los límites de concentración de contamintantes clave en el riesgo de la salud pública [5]. Actualmente los contaminantes propuestos por la OMS son los siguientes:
 
 - **Partículas en suspensión**: son una mezcla de pequeñas partículas en estado sólido o líquido como hollín, polvo o agua que se encuentran suspendidas en el aire. En concreto se tienen en cuenta como contaminantes las partículas de 10µm o menos (PM<sub>10</sub>) que suponen un peligro al poder penetrar los pulmones al ser inhaladas y las partículas de 2.5µm o menos (PM<sub>2.5</sub>) que pueden incluso entrar en el sistema sanguíneo. Según la OMS existe una estrecha relación entre la exposición a estas partículas y el aumento de la mortalidad y morbilidad [5].
-- **Ozono troposférico**: a partir de reacciones involucrando a la luz solar y contaminantes ya presentes en el aire (óxidos de nitrógeno e hidrocarburos) se forma ozono troposférico. El ozono junto a los otros contaminantes en la atmósfera forman el esmog fotoquímico [6] cuya exposición puede causar problemas respiratorios, provocar o empeorar el asma, etc [7].
-- **Dióxido de nitrógeno**: es un gas tóxico que, al ser inhalado, irrita las vias respiratorias y, en la atmósfera, supone una de las causas de la formación de ozono troposférico y de la formación de la lluvia ácida junto al dióxido de azufre [8][9].
-- **Dióxido de azufre**:
+- **Ozono troposférico (O<sub>3</sub>)**: a partir de reacciones involucrando a la luz solar y contaminantes ya presentes en el aire (óxidos de nitrógeno e hidrocarburos) se forma ozono troposférico. El ozono junto a los otros contaminantes en la atmósfera forman el esmog fotoquímico [6] cuya exposición puede causar problemas respiratorios, provocar o empeorar el asma, etc [7].
+- **Dióxido de nitrógeno (NO<sub>2</sub>)**: es un gas tóxico que, al ser inhalado, irrita las vias respiratorias y, en la atmósfera, supone una de las causas de la formación de ozono troposférico y de la formación de la lluvia ácida junto al dióxido de azufre [8][9].
+- **Dióxido de azufre (SO<sub>2</sub>)**: al igual que el NO<sub>2</sub> es un gas que al ser inhalado irrita las vias respiratorias dificultando la respiración y supone una de las principales causas de la formación de la lluvia ácida [9][10].
 
 ## Referencias
 
@@ -37,3 +37,6 @@ Aunque las legislaciones difieran entre países, la contaminación de la atmósf
 
 [9] What is Acid Rain?. United States Environmental Protection Agency
 . Retrieved December 8, 2018 from [https://www.epa.gov/acidrain/what-acid-rain](https://www.epa.gov/acidrain/what-acid-rain)
+
+[10] Sulfur Dioxide (SO2) Pollution. United States Environmental Protection Agency
+. Retrieved December 8, 2018 from [https://www.epa.gov/so2-pollution/sulfur-dioxide-basics](https://www.epa.gov/so2-pollution/sulfur-dioxide-basics)
