@@ -11,8 +11,8 @@ Para asegurarse que las concentraciones de los contaminantes en la atmósfera no
 Aunque las legislaciones difieran entre países, la contaminación de la atmósfera es un peligro para todos porque, una vez en la atmósfera, los contaminantes pueden viajar por acción del viento a otras regiones. Por ello, la OMS provee unas directrices generales acerca de los límites de concentración de contamintantes clave en el riesgo de la salud pública [5]. Actualmente los contaminantes propuestos por la OMS son los siguientes:
 
 - **Partículas en suspensión**: son una mezcla de pequeñas partículas en estado sólido o líquido como hollín, polvo o agua que se encuentran suspendidas en el aire. En concreto se tienen en cuenta como contaminantes las partículas de 10µm o menos (PM<sub>10</sub>) que suponen un peligro al poder penetrar los pulmones al ser inhaladas y las partículas de 2.5µm o menos (PM<sub>2.5</sub>) que pueden incluso entrar en el sistema sanguíneo. Según la OMS existe una estrecha relación entre la exposición a estas partículas y el aumento de la mortalidad y morbilidad [5].
-- **Ozono**: a partir de reacciones involucrando a la luz solar y contaminantes ya presentes en el aire (óxidos de nitrógeno e hidrocarburos) se forma ozono troposférico. El ozono junto a los otros contaminantes en la atmósfera forman el esmog fotoquímico [6] cuya exposición puede causar problemas respiratorios, provocar o empeorar el asma, etc [7].
-- **Dióxido de nitrógeno**:
+- **Ozono troposférico**: a partir de reacciones involucrando a la luz solar y contaminantes ya presentes en el aire (óxidos de nitrógeno e hidrocarburos) se forma ozono troposférico. El ozono junto a los otros contaminantes en la atmósfera forman el esmog fotoquímico [6] cuya exposición puede causar problemas respiratorios, provocar o empeorar el asma, etc [7].
+- **Dióxido de nitrógeno**: es un gas tóxico que, al ser inhalado, irrita las vias respiratorias y, en la atmósfera, supone una de las causas de la formación de ozono troposférico y de la formación de la lluvia ácida junto al dióxido de azufre [8][9].
 - **Dióxido de azufre**:
 
 ## Referencias
@@ -31,3 +31,9 @@ Aunque las legislaciones difieran entre países, la contaminación de la atmósf
 
 [7] Ground-level Ozone Pollution. United States Environmental Protection Agency
 . Retrieved December 8, 2018 from [https://www.epa.gov/ground-level-ozone-pollution/health-effects-ozone-pollution](https://www.epa.gov/ground-level-ozone-pollution/health-effects-ozone-pollution)
+
+[8] Nitrogen Dioxide (NO2) Pollution. United States Environmental Protection Agency
+. Retrieved December 8, 2018 from [https://www.epa.gov/no2-pollution/basic-information-about-no2](https://www.epa.gov/no2-pollution/basic-information-about-no2)
+
+[9] What is Acid Rain?. United States Environmental Protection Agency
+. Retrieved December 8, 2018 from [https://www.epa.gov/acidrain/what-acid-rain](https://www.epa.gov/acidrain/what-acid-rain)
