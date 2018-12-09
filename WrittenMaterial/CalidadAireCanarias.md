@@ -1,6 +1,6 @@
 # Calidad del Aire en Canarias
 
-La calidad del aire es un indicador de la concentración de agentes contaminantes en el aire y de su peligro para la salud de las personas. En Canarias, se dispone de varias estaciones automáticas que toman mediciones sobre los parámetros más importantes para determinar la calidad del aire como el material particularizado, ozono troposférico, azufre, dirección y velocidad del viento, etc. Hay estaciones que pertenecen a empresas privadas, en concreto a ENDESA y CEPSA, y estaciones que pertenecen al gobierno. Los datos de estas estaciones son tratados por el Centro de Evaluación y Gestión de la Calidad del Aire (CEGCA) para que, en caso de que el nivel de calidad del aire incumpla la normativa, se activen los protocolos adecuados para dismunir emisiones contaminantes.
+En Canarias, se dispone de varias estaciones automáticas que toman mediciones sobre concentraciones de contaminantes y factores atmosféricos como el material particularizado, ozono troposférico, dirección y velocidad del viento, etc. Hay estaciones que pertenecen a empresas privadas, en concreto a ENDESA y CEPSA, y estaciones que pertenecen al gobierno. Los datos de estas estaciones son tratados por el Centro de Evaluación y Gestión de la Calidad del Aire (CEGCA) para que, en caso de que el nivel de calidad del aire incumpla la normativa, se activen los protocolos adecuados para dismunir emisiones contaminantes.
 
 Fuente de datos: [Red de Control y Vigilancia de la Calidad del Aire de Canarias](http://www.gobiernodecanarias.org/medioambiente/calidaddelaire/inicio.do)
 
@@ -39,7 +39,7 @@ A continuación se muestra la información acerca de los parámetros que se reco
 
 ## Información sobre las estaciones meteorológicas automáticas de Tenerife
 
-### Aglomeración de Santa Cruz de Tenerife - San Cristóbal de La Laguna
+### Santa Cruz de Tenerife - San Cristóbal de La Laguna
 
 | ESTACIÓN                                             | RED            | PARÁMETROS                                                                                    |
 | ---------------------------------------------------- | -------------- | --------------------------------------------------------------------------------------------- |
