@@ -4,7 +4,7 @@ La calidad del aire es un indicador de la concentración de agentes contaminante
 
 Fuente de datos: [Red de Control y Vigilancia de la Calidad del Aire de Canarias](http://www.gobiernodecanarias.org/medioambiente/calidaddelaire/inicio.do)
 
-Otras fuentes: http://www.gobiernodecanarias.org/medioambiente/piac/temas/atmosfera/calidad-del-aire/
+Fuente de información: [http://www.gobiernodecanarias.org/medioambiente/piac/temas/atmosfera/calidad-del-aire/](http://www.gobiernodecanarias.org/medioambiente/piac/temas/atmosfera/calidad-del-aire/)
 
 ## Información sobre los parámetros
 
@@ -37,7 +37,7 @@ A continuación se muestra la información acerca de los parámetros que se reco
 | XIL         | Concentración de Xileno         |  µg/m³   |
 | m-p XIL     | Concentración de m-p Xileno     |  µg/m³   |
 
-## Información sobre las estaciones meteorológicas automáticas
+## Información sobre las estaciones meteorológicas automáticas de Tenerife
 
 ### Aglomeración de Santa Cruz de Tenerife - San Cristóbal de La Laguna
 
@@ -89,69 +89,7 @@ A continuación se muestra la información acerca de los parámetros que se reco
 | Tajao                             | ENDESA         | CO, NO, NO2, O3, PM10, PM2.5, SO2                                    |
 | Torre Meteorológica de Candelaria | DESCONOCIDO    | NO, NO2, PM1, PM10, PM2.5, SO2                                       |
 
-### Aglomeración de Las Palmas de Gran Canaria
-
-| ESTACIÓN                       | RED            | PARÁMETROS                                                               |
-| ------------------------------ | -------------- | ------------------------------------------------------------------------ |
-| Jinámar fase 3                 | ENDESA         | SO2, NO, NO2, NOX, PM10, PM2.5, O3, CO, DD, VV, HR, TMP, PRB             |
-| Mercado Central                | MEDIO AMBIENTE | SO2, NOX, PM10, O3, CO, PM2.5, TMP, DD, VV, HR, PRB, RS, NO, NO2         |
-| Nestor Alamo                   | MEDIO AMBIENTE | SO2, NO, NO2, NOX, PM10, O3, TMP, DD, VV, HR, PRB, RS                    |
-| San Nicolás                    | MEDIO AMBIENTE | SO2, NO, NO2, NOX, PM10, PM2.5, O3, CO, VV, DD, TMP, HR, RS, LL, PRB, BC |
-| Torre Meteorológica CT Jinámar | DESCONOCIDO    | TMP, DD, VV, PRB                                                         |
-
-### Zona Norte de Gran Canaria
-
-| ESTACIÓN                      | RED            | PARÁMETROS                                                           |
-| ----------------------------- | -------------- | -------------------------------------------------------------------- |
-| Polideportivo Afonso - Arucas | MEDIO AMBIENTE | SO2, NO, NO2, NOX, CO, O3, PM10, PM2.5, DD, VV, TMP, HR, PRB, RS, LL |
-
-### Zona Sur de Gran Canaria
-
-| ESTACIÓN                          | RED            | PARÁMETROS                                                           |
-| --------------------------------- | -------------- | -------------------------------------------------------------------- |
-| Agüimes                           | ENDESA         | SO2, NO, NO2, NOX, PM10, PM2.5, O3, DD, VV, TMP, HR, PRB             |
-| Arinaga                           | ENDESA         | SO2, NO, NO2, NOX, PM10, PM2.5, O3, DD, VV, TMP, HR, PRB             |
-| Castillo del Romeral              | ENDESA         | SO2, NO, NO2, PM10, PM2.5, O3, CO, DD, VV, TMP, HR, PRB              |
-| Pedro Lezcano                     | ENDESA         | SO2, NO, NO2, NOX, PM10, PM2.5, O3, CO, DD, VV, HR, TMP, PRB         |
-| Playa del Inglés                  | ENDESA         | SO2, NO, NO2, NOX, PM10, PM2.5, O3, DD, VV, TMP, HR, PRB             |
-| San Agustín                       | ENDESA         | SO2, NO, NO2, NOX, PM10, PM2.5, O3, DD, VV, TMP, HR, PRB             |
-| Camping Temisas - Sta Lucía de T. | ENDESA         | SO2, NO, NO2, NOX, PM10, PM2.5, O3, DD, VV, TMP, HR, PRB             |
-| La Loma - Telde                   | ENDESA         | SO2, NO, NO2, NOX, PM10, PM2.5, O3, CO, DD, VV, HR, TMP, PRB         |
-| Parque de San Juan - Telde        | MEDIO AMBIENTE | SO2, NO, NO2, NOX, PM10, PM2.5, O3, CO, DD, VV, TMP, HR, RS, LL, PRB |
-| Jinamar                           | DESCONOCIDO    | SO2, NO, NO2, PM10, O3, CO, NOX                                      |
-| Sardina                           | DESCONOCIDO    | SO2, NO, NO2, PM10, PM2.5                                            |
-| Torre Meteorológica Tirajana      | DESCONOCIDO    | DD, VV, TMP, HR, PRB                                                 |
-
-### Zona de Fuerteventura y Lanzarote
-
-| ESTACIÓN                                  | RED            | PARÁMETROS                                                                              |
-| ----------------------------------------- | -------------- | --------------------------------------------------------------------------------------- |
-| Arrecife                                  | ENDESA         | SO2, NO, NO2, PM10, PM2.5, O3, CO, NOX                                                  |
-| Centro de Arte                            | ENDESA         | SO2, NO, NO2, PM10, PM2.5, O3, CO, NOX, DD, VV, TMP, HR, PRB                            |
-| Las Caletas - Teguise                     | ENDESA         | SO2, NO, NO2, NOX, PM10, PM2.5, O3, CO, DD, VV, TMP, HR, PRB                            |
-| Costa Teguise                             | ENDESA         | SO2, NO, NO2, PM10, PM2.5, O3, CO, NOX                                                  |
-| Parque de la Piedra                       | ENDESA         | SO2, NO, NO2, PM10, PM2.5, O3, CO, NOX                                                  |
-| Ciudad Deportiva - Arrecife               | MEDIO AMBIENTE | SO2, NO, NO2, NOX, PM10, PM2.5, O3, CO, DD, VV, TMP, HR, RS, LL, PRB                    |
-| Casa Palacio - Puerto del Rosario         | MEDIO AMBIENTE | SO2, NO, NO2, NOX, CO, O3, BEN, TOL, m-p XIL, PM10, PM2.5, DD, VV, TMP, HR, PRB, RS, LL |
-| Tefia - Puerto del Rosario                | MEDIO AMBIENTE | O3, PM10, DD, VV, TMP, HR, PRB, RS, LL                                                  |
-| El Charco - Puerto del Rosario            | ENDESA         | SO2, NO, NO2, PM10, PM2.5, O3, CO                                                       |
-| Portátil Ed.Polivalente - Pto del Rosario | DESCONOCIDO    | SO2, NO, NO2, NOX, DD, VV                                                               |
-| Torre Meteorológica Las Salinas           | DESCONOCIDO    | DD, VV, TMP, HR, PRB                                                                    |
-| Torre Meteorológica Punta Grande          | DESCONOCIDO    | DD, VV, TMP, HR, PRB                                                                    |
-
-### Zona de La Palma, La Gomera y El Hierro
-
-| ESTACIÓN                          | RED            | PARÁMETROS                                                           |
-| --------------------------------- | -------------- | -------------------------------------------------------------------- |
-| Echedo - Valverde                 | MEDIO AMBIENTE | O3, H2S, PM10, DD, VV, TMP, HR, PRB, RS, LL                          |
-| El Pilar - Sta Cruz de La Palma   | ENDESA         | SO2, NO, NO2, PM10, NOX, PM2.5, CO, O3, VV, DD, TMP, HR, PRB         |
-| San Antonio - Breña Baja          | MEDIO AMBIENTE | SO2, NO, NO2, NOX, PM10, O3, PM2.5, CO, DD, VV, TMP, HR, PRB, RS, LL |
-| La Grama - Breña Alta             | ENDESA         | SO2, NO, NO2, NOX, PM10, PM2.5, CO, O3, VV, DD, TMP, HR, PRB         |
-| Las Balsas - S. Andrés y Sauces   | MEDIO AMBIENTE | O3, PM10, DD, VV, TMP, HR, PRB, RS, LL                               |
-| Las Galanas - S.S Gomera          | ENDESA         | SO2, NO, NO2, NOX, O3, PM10, PM2.5, DD, VV, TMP, HR, PRB             |
-| Centro de Visitantes - S.S Gomera | ENDESA         | SO2, HR, TMP                                                         |
-
-## Coordenadas geográficas de las estaciones (JSON)
+## Coordenadas geográficas de las estaciones de Tenerife (JSON)
 
 ```json
 [
