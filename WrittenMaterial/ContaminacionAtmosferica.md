@@ -1,4 +1,4 @@
-# Importancia de la predicción de contaminantes en la atmósfera
+# Contaminación atmosférica
 
 La presencia de materia intrusa en la atmósfera puede resultar dañina para los seres vivos. Por ejemplo, cuando una persona inhala partículas de monóxido de carbono (CO), al llegar a la sangre se unen a la hemoglobina y, como esta unión es mucho más fuerte que con el oxígeno, se disminuye la capacidad del cuerpo de transportar oxígeno [1]. En caso de estar expuesto a una fuente continua puede producir la muerte en minutos. Otro ejemplo son las partículas en suspensión que pueden perforar el sistema respiratorio y cardiovascular siendo responsable de 7 millones de muertes al año según la Organización Mundial de la Salud (OMS) [2].
 
