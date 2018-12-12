@@ -15,11 +15,13 @@ Aunque las legislaciones difieran entre países, la contaminación de la atmósf
 
 Para asegurarse que las concentraciones de los contaminantes en la atmósfera no superan los límites legales se usan datos de sensores que miden estas concentraciones para llevar a cabo procesos de control y de mitigación si fuera necesario. Por tanto, **poder predecir las concentraciones de los contaminantes supondría poder reaccionar antes de que la calidad del aire sea peligrosa**.
 
-El presente trabajo tiene como objetivo la predicción del nivel de concentración en la atmósfera de los contaminantes que menciona la OMS en Tenerife en un plazo de 24 horas. Para ello se va a hacer uso de datos históricos tanto de concentraciones de contaminantes como de variables atmosféricas. La naturaleza de los datos cumple con las características principales para considerarlos _Big Data_:
+El presente trabajo tiene como objetivo la predicción del nivel de concentración de los anteriores contaminantes en Tenerife en un período de 24 horas. Para ello se va a hacer uso de datos históricos de concentración de contaminación además de datos meteorológicos pues, como se ha mencionado previamente, variables como la fuerza y dirección del viento o luz solar tienen un impacto directo en la dispersión y formación de contaminantes.
+
+La naturaleza de los datos cumple con las características principales para considerarlos _Big Data_:
 
 - Gran volumen
-- Frecuencia de llegada relativamente alta
-- Estructura variable debido al uso de distintas fuentes de datos con distintos formatos (TODO: escribir sobre los datos de AEMET si definitivamente se hace el trabajo sobre Tenerife y datos relativos al calendario para saber los días de fiesta)
+- Frecuencia de llegada relativamente alta (se añaden datos al menos una vez al día)
+- Estructura variable debido al uso de distintas fuentes de datos con distintos formatos (TODO: escribir sobre los datos de AEMET si definitivamente se hace el trabajo sobre Tenerife y posiblemente datos relativos al calendario para saber los días de fiesta)
 
 ## Referencias
 

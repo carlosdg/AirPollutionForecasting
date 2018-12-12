@@ -260,6 +260,6 @@ Junto a la medida de cada parámetro se le asocia un flag indicando el caracter 
 - **C**: Dato no disponible porque durante la medida se realizaba una verificación en la parte alta del rango del analizador.
 - **M**: Dato no disponible porque durante la medida se realizaban operaciones de mantenimiento.
 - **N**: Dato no disponible por causa desconocida o no especificada.
-- **D**: Dato no disponible por motivos têcnicos.
+- **D**: Dato no disponible por motivos técnicos.
 
 Fuente: [http://www.gobiernodecanarias.org/medioambiente/calidaddelaire/interpretacion.do](http://www.gobiernodecanarias.org/medioambiente/calidaddelaire/interpretacion.do)
