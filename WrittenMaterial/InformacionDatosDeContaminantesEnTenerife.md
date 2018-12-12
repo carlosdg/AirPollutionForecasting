@@ -1,10 +1,10 @@
-# Calidad del Aire en Canarias
+# Información acerca de los datos de contaminantes en Tenerife
 
 En Canarias, se dispone de varias estaciones automáticas que toman mediciones sobre concentraciones de contaminantes y factores atmosféricos como el material particularizado, ozono troposférico, dirección y velocidad del viento, etc. Hay estaciones que pertenecen a empresas privadas, en concreto a ENDESA y CEPSA, y estaciones que pertenecen al gobierno. Los datos de estas estaciones son tratados por el Centro de Evaluación y Gestión de la Calidad del Aire (CEGCA) para que, en caso de que el nivel de calidad del aire incumpla la normativa, se activen los protocolos adecuados para dismunir emisiones contaminantes.
 
-Fuente de datos: [Red de Control y Vigilancia de la Calidad del Aire de Canarias](http://www.gobiernodecanarias.org/medioambiente/calidaddelaire/inicio.do)
-
 Fuente de información: [http://www.gobiernodecanarias.org/medioambiente/piac/temas/atmosfera/calidad-del-aire/](http://www.gobiernodecanarias.org/medioambiente/piac/temas/atmosfera/calidad-del-aire/)
+
+Fuente de datos: [Red de Control y Vigilancia de la Calidad del Aire de Canarias](http://www.gobiernodecanarias.org/medioambiente/calidaddelaire/inicio.do)
 
 ## Información sobre los parámetros
 
@@ -245,3 +245,21 @@ A continuación se muestra la información acerca de los parámetros que se reco
   }
 ]
 ```
+
+## Periocidad
+
+Los datos se pueden descargar en intervalos horarios, diarios, mensuales o cada ocho horas.
+
+## Flags
+
+Junto a la medida de cada parámetro se le asocia un flag indicando el caracter del dato. Sus posibles valores son:
+
+- **T**: Dato temporal. Indica que el dato se encuentra pendiente de revisión y es susceptible de ser modificado.
+- **V**: Dato válido. Indica que el dato ya ha pasado por una primera revisión y que por el momento se considera válido. No obstante, es susceptible de sufrir modificaciones como consecuencia de las revisiones obligatorias que han de realizarse posteriormente.
+- **Z**: Dato no disponible porque durante la medida se realizaba una verificación del cero del analizador.
+- **C**: Dato no disponible porque durante la medida se realizaba una verificación en la parte alta del rango del analizador.
+- **M**: Dato no disponible porque durante la medida se realizaban operaciones de mantenimiento.
+- **N**: Dato no disponible por causa desconocida o no especificada.
+- **D**: Dato no disponible por motivos têcnicos.
+
+Fuente: [http://www.gobiernodecanarias.org/medioambiente/calidaddelaire/interpretacion.do](http://www.gobiernodecanarias.org/medioambiente/calidaddelaire/interpretacion.do)
