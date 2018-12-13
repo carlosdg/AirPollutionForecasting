@@ -1,4 +1,6 @@
-# Información acerca de los datos climatológicos que ofrece AEMET
+# Información acerca de los datos meteorológicos que ofrece AEMET
+
+La Agencia Estatal de Meteorología (AEMET), a través de [AEMET OpenData](https://opendata.aemet.es/centrodedescargas/inicio), provee al público de una _API REST_ para descargar gratuitamente datos meteorológicos y climatológicos y otros productos como gráficas elaborados por AEMET. Entre estos datos se pueden encontrar observaciones meteorológicas diarias de potencial interés para su uso en el presente trabajo como horas de sol, temperatura media, velocidad media del viento, etc.
 
 ## Localización de las estaciones
 
@@ -18,7 +20,7 @@ Fuentes:
 
 ## Metadatos
 
-A continuación se muestra la descripción sobre los datos climatológicos diarios que provee AEMET
+A continuación se muestra la descripción sobre los datos meteorológicos diarios que provee AEMET
 
 ```json
 {
