@@ -17,11 +17,11 @@ Para asegurarse que las concentraciones de los contaminantes en la atmósfera no
 
 El presente trabajo tiene como objetivo la predicción del nivel de concentración de los anteriores contaminantes en Tenerife en un período de 24 horas. Para ello se va a hacer uso de datos históricos de concentración de contaminación además de datos meteorológicos pues, como se ha mencionado previamente, variables como la fuerza y dirección del viento o luz solar tienen un impacto directo en la dispersión y formación de contaminantes.
 
-La naturaleza de los datos cumple con las características principales para considerarlos _Big Data_:
+La naturaleza de los datos se aproxima a lo considerado como _Big Data_ por lo que se hará uso de técnicas para el tratamiento de _Big Data_ con el fin de lidiar con las siguientes características:
 
 - Gran volumen
 - Frecuencia de llegada relativamente alta (se añaden datos al menos una vez al día)
-- Estructura variable debido al uso de distintas fuentes de datos con distintos formatos (TODO: escribir sobre los datos de AEMET si definitivamente se hace el trabajo sobre Tenerife y posiblemente datos relativos al calendario para saber los días de fiesta)
+- Estructura variable debido al uso de distintas fuentes de datos con distintos formatos
 
 ## Referencias
 
