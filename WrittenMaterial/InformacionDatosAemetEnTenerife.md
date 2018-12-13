@@ -1,3 +1,5 @@
+# Información acerca de los datos climatológicos que ofrece AEMET
+
 ## Localización de las estaciones
 
 | Estación              | Identificador | Latitud        | Longitud       | Altitud (m) |
@@ -13,3 +15,160 @@ Fuentes:
 
 - [https://datosclima.es/Aemet2013/LocalizacionEstaciones.php](https://datosclima.es/Aemet2013/LocalizacionEstaciones.php)
 - [https://opendata.aemet.es/centrodedescargas/productosAEMET](https://opendata.aemet.es/centrodedescargas/productosAEMET) (Apartado "Valores Climatológicos")
+
+## Metadatos
+
+A continuación se muestra la descripción sobre los datos climatológicos diarios que provee AEMET
+
+```json
+{
+  "unidad_generadora": "Servicio del Banco de Datos Nacional de Climatología",
+  "periodicidad": "1 vez al día, con un retardo de 4 días",
+  "descripcion": "Climatologías diarías",
+  "formato": "application/json",
+  "copyright": "© AEMET. Autorizado el uso de la información y su reproducción citando a AEMET como autora de la misma.",
+  "notaLegal": "http://www.aemet.es/es/nota_legal",
+  "campos": [
+    {
+      "id": "fecha",
+      "descripcion": "fecha del dia (AAAA-MM-DD)",
+      "tipo_datos": "string",
+      "requerido": true
+    },
+    {
+      "id": "indicativo",
+      "descripcion": "indicativo climatológico",
+      "tipo_datos": "string",
+      "requerido": true
+    },
+    {
+      "id": "nombre",
+      "descripcion": "nombre (ubicación) de la estación",
+      "tipo_datos": "string",
+      "requerido": true
+    },
+    {
+      "id": "provincia",
+      "descripcion": "provincia de la estación",
+      "tipo_datos": "string",
+      "requerido": true
+    },
+    {
+      "id": "altitud",
+      "descripcion": "altitud de la estación en m sobre el nivel del mar",
+      "tipo_datos": "float",
+      "unidad": "m",
+      "requerido": true
+    },
+    {
+      "id": "tmed",
+      "descripcion": "Temperatura media diaria",
+      "tipo_datos": "float",
+      "unidad": "grados celsius",
+      "requerido": false
+    },
+    {
+      "id": "prec",
+      "descripcion": "Precipitación diaria de 07 a 07",
+      "tipo_datos": "float",
+      "unidad": "mm",
+      "requerido": false
+    },
+    {
+      "id": "tmin",
+      "descripcion": "Temperatura Mínima del día",
+      "tipo_datos": "float",
+      "unidad": "ºC",
+      "requerido": false
+    },
+    {
+      "id": "horatmin",
+      "descripcion": "Hora y minuto de la temperatura mínima",
+      "tipo_datos": "string",
+      "unidad": "UTC",
+      "requerido": false
+    },
+    {
+      "id": "tmax",
+      "descripcion": "Temperatura Máxima del día",
+      "tipo_datos": "float",
+      "unidad": "ºC",
+      "requerido": false
+    },
+    {
+      "id": "horatmax",
+      "descripcion": "Hora y minuto de la temperatura máxima",
+      "tipo_datos": "string",
+      "unidad": "UTC",
+      "requerido": false
+    },
+    {
+      "id": "dir",
+      "descripcion": "Dirección de la racha máxima",
+      "tipo_datos": "float",
+      "unidad": "decenas de grado",
+      "requerido": false
+    },
+    {
+      "id": "velmedia",
+      "descripcion": "Velocidad media del viento",
+      "tipo_datos": "float",
+      "unidad": "m/s",
+      "requerido": false
+    },
+    {
+      "id": "racha",
+      "descripcion": "Racha máxima del viento",
+      "tipo_datos": "float",
+      "unidad": "m/s",
+      "requerido": false
+    },
+    {
+      "id": "horaracha",
+      "descripcion": "Hora y minuto de la racha máxima",
+      "tipo_datos": "float",
+      "unidad": "UTC",
+      "requerido": false
+    },
+    {
+      "id": "sol",
+      "descripcion": "Insolación",
+      "tipo_datos": "float",
+      "unidad": "horas",
+      "requerido": false
+    },
+    {
+      "id": "presmax",
+      "descripcion": "Presión máxima al nivel de referencia de la estación",
+      "tipo_datos": "float",
+      "unidad": "hPa",
+      "requerido": false
+    },
+    {
+      "id": "horapresmax",
+      "descripcion": "Hora de la presión máxima (redondeada a la hora entera más próxima)",
+      "tipo_datos": "float",
+      "unidad": "hora entera",
+      "requerido": false
+    },
+    {
+      "id": "presmin",
+      "descripcion": "Presión mínima al nivel de referencia de la estación",
+      "tipo_datos": "float",
+      "unidad": "hPa",
+      "requerido": false
+    },
+    {
+      "id": "horapresmin",
+      "descripcion": "Hora de la presión mínima (redondeada a la hora entera más próxima)",
+      "tipo_datos": "float",
+      "unidad": "hora entera",
+      "requerido": false
+    }
+  ]
+}
+```
+
+## Fuentes adicionales
+
+Meteorología y climatología. ¿En qué se diferencian?. Emilio Rey. Última actualización: 18 de febrero de 2017. Recogido el día 13 de diciembre de 2018 de [https://www.solucionesintegralesendesa.com/blog/meteorologia/meteorologia-y-climatologia/](https://www.solucionesintegralesendesa.com/blog/meteorologia/meteorologia-y-climatologia/)
