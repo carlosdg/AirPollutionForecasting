@@ -1,0 +1,37 @@
+\documentclass[12pt]{article}
+
+\usepackage{csquotes}
+\usepackage[spanish]{babel}
+\usepackage[hidelinks]{hyperref} % So the Table of Contents to has links to the sections
+\usepackage{xcolor} % For the hyperref link colors
+\usepackage[backend=biber, style=numeric, citestyle=numeric]{biblatex}
+\usepackage{graphicx} % To embed images
+\usepackage{cleveref} % To reference with cref and see the name of the object
+
+\hypersetup{colorlinks = true, allcolors={blue!80!black}}
+\addbibresource{Resources/Bibliography/bibliography.bib} % Imports bibliography file
+\graphicspath{ {Resources/Images/} } % Sets the path to look for images 
+\title{Almacenes de datos}
+\author{Carlos Domínguez García (alu0100966589@ull.edu.es)}
+\date{28 de febrero de 2019}
+
+\begin{document}
+
+  \maketitle
+  \pagebreak
+  
+  \tableofcontents
+  \pagebreak
+
+  \section{Introduction}
+    % Diferencia entre las bases de datos transaccionales y los almacenes de datos
+    Cuando hablamos de una base de datos relacional pensamos en un sistema pensado para procesar transacciones\footnote{Una transacción es un conjunto de operaciones que respetan las propiedades \textit{ACID (Atomicity, Consistency, Isolation, Durability)}, es decir, se han de realizar de manera que ocurren todas seguidas o no ocurre ninguna, en todo momento respetan las restricciones de la base de dato en todo momento, en caso de haber varias transacciones de manera concurrente el resultado será como si ocurrieran de manera secuencial (los cambios por una no se ve por la otra) y una vez termina una transacción todos los cambios son registrados, no se pierden. \cite{Stackoverflow_AcidAndDatabaseTransactions}}. \textit{Online Transaction Processing System} en inglés.
+    El modelo de datos para este tipo de sistema suele estar normalizado para tener una mínima redundancia de datos y así necesitar menos espacio de almacenamiento y tener una mayor robustez a la inconsistencia. De esta manera para actualizar o insertar un valor sólo hay que hacerlo en un sitio en concreto por lo que estos sistemas bastantes rápidos para ello. Por ello estos sistemas se suelen usar para mantener el estado actual de un proceso y no guardan datos históricos.
+
+    Para realizar análisis estos sistemas no son los más adecuados porque haría falta tener datos históricos. Además requiere realizar consultas muy complejas que en un modelo normalizado requeriría unir muchas tablas. Puede que incluso no se pueda realizar en muchos casos: las organizaciones suelen tener varias bases de datos en las que guardan información relacionada a distintos procesos y un análisis podría requerir datos de todas ellas e incluso de fuentes externas como es nuestro caso.
+  
+  \section{Almacenes de datos}
+
+  \printbibliography
+  
+\end{document}
