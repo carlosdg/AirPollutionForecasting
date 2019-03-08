@@ -135,11 +135,9 @@ FROM generate_series(
   TIMESTAMP WITHOUT TIME ZONE '2019/12/31',
   INTERVAL '1 day') AS curr_date;
 
-INSERT INTO dim_time VALUES 
-(0), (1), (2), (3), (4), (5), 
-(6), (7), (8), (9), (10), (11), 
-(12), (13), (14), (15), (16), (17), 
-(18), (19), (20), (21), (22), (23);
+INSERT INTO dim_time
+SELECT *
+FROM generate_series(0, 23) AS hour;
 
 INSERT INTO dim_duration VALUES 
 ('daily', 24), 
