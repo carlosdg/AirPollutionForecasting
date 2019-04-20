@@ -1,46 +1,181 @@
-const os = require("os");
+const fs = require("fs");
+const util = require("util");
 const path = require("path");
-const puppeteer = require("puppeteer");
+
+const mkdir = util.promisify(fs.mkdir);
+const readdir = util.promisify(fs.readdir);
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 /**
- * Launches a browser that, for each form parameter given, goes to the given form URL
- * in a new tab. Then the given form filler function is called in the page's context
- * with the respective form parameters.
+ * This function automates the task of filling the form of air data quality of the
+ * Canary Islands government. It has to be called in the browser's console of the
+ * form web page
  *
- * The browser's user data is store in a OS tmp directory. So if the users want
- * to customize some settings they can and they will be persisted until the tmp
- * directory is emptied (normally they are automatically emptied by the OS on reboot).
- *
- * @param {String} formUrl URL of the form to fill
- * @param {Function} formFiller Function used in the page's console context to fill the form
- * given some form parameters to enter
- * @param {Array<Object>} formParameters List of parameters that have to be given to the
- * form filler function to fill a form
- *
- * @returns {Promise<Array<Promise>>} An array of promises, each resolves when the formFiller is
- * evaluated in its respective page's context. Or rejects if there is an error.
+ * @param {Object} parameters An object with the following properties:
+ * - {Number} year: Integer denoting the year
+ * - {Number} monthIndex: Integer denoting the month ranging between [0, 11]
+ * - {String} area: Area to download data from
  */
-module.exports = async function automatedFillForms(
-  formUrl,
-  formFiller,
-  formParameters
-) {
-  const USER_DATA_DIR = path.join(os.tmpdir(), "puppeteer_user_data_dir");
-  const MILLISECONDS_TO_WAIT_BETWEEN_TABS = 1000;
+function fillForm({ year = 2015, monthIndex = 0, area = "" } = {}) {
+  // First year in the select list (index 0)
+  const FIRST_POSSIBLE_YEAR = parseInt(
+    Array.from(document.getElementById("selAnioIni").options)
+      .map(option => option.text)
+      .shift(),
+    10
+  );
 
-  const browser = await puppeteer.launch({
-    headless: false,
-    userDataDir: USER_DATA_DIR
+  // Index of the year asked in the select list
+  const yearIndex = Math.floor(year - FIRST_POSSIBLE_YEAR);
+
+  // Get current date to check that the given date parameters are before the current date
+  const currentDate = new Date();
+
+  // Check that the year is valid
+  if (yearIndex < 0 || year > currentDate.getFullYear()) {
+    throw new Error(
+      `Invalid year "${year}". It has to be between ${FIRST_POSSIBLE_YEAR} and ${currentDate.getFullYear()}`
+    );
+  }
+
+  // Check that the month index refers to a valid month
+  if (monthIndex < 0 || monthIndex > 11) {
+    throw new Error(
+      `Invalid month "${monthIndex}". It has to be in the range [0, 11]`
+    );
+  }
+
+  // Check that the given month index is before the current
+  // month if the year if the current year
+  if (
+    year === currentDate.getFullYear() &&
+    monthIndex >= currentDate.getMonth()
+  ) {
+    throw new Error(
+      `Invalid month "${monthIndex}". It has to be in the range [0, ${currentDate.getMonth()})`
+    );
+  }
+
+  // Select hourly historical data
+  document.getElementById("pinteg").selectedIndex = 0;
+
+  // Select the given month as initial month
+  document.getElementById("selMesIni").selectedIndex = monthIndex;
+
+  // Select the given year as initial year
+  document.getElementById("selAnioIni").selectedIndex = yearIndex;
+
+  // This is a function defined in the page, this updates the calendar based on the previous selections
+  updateCalIni();
+
+  // Select the given month as final month
+  document.getElementById("selMesFin").selectedIndex = monthIndex;
+
+  // Select final year
+  document.getElementById("selAnioFin").selectedIndex = yearIndex;
+
+  // This is a function defined in the page, this updates the calendar based on the previous selections
+  updateCalFin();
+
+  // Select first day of the initial calendar
+  document.querySelector("#cal1 td a").click();
+
+  // Select last day in the final calendar
+  // (We conver the node list to an array and take the last element with pop)
+  [...document.querySelectorAll("#cal2 td a")].pop().click();
+
+  // Select the area
+  const stationSelect = document.getElementById("tbEstaciones"); // HTML select element
+  const options = [...stationSelect.options]; // array of HTML options
+
+  // Look for the options that matches the area asked
+  const validOptions = options.filter(option =>
+    option.textContent.toUpperCase().includes(area.toUpperCase())
+  );
+
+  // Throw if there is no option named like the given area
+  if (validOptions.length <= 0) {
+    throw new Error(
+      `Couldn't find area "${area}". Maybe there is a tilde missing`
+    );
+  }
+
+  // Select the first valid option
+  stationSelect.selectedIndex = validOptions[0].index;
+
+  // Trigger the "change" event
+  stationSelect.dispatchEvent(new Event("change"));
+}
+
+/**
+ * Calls the downloader and waits until the file downloads.
+ *
+ * NOTE: right now we need to use a folder for each downloaded file to track it
+ * progress
+ *
+ * @param {any} page Puppeteer page object
+ * @param {any} downloader Function that triggers the download
+ */
+async function download(page, downloader) {
+  const randomString = Math.random()
+    .toString(36)
+    .substr(2, 8);
+  const randomFolderName = `download-${randomString}`;
+  const downloadPath = path.resolve(__dirname, "downloads", randomFolderName);
+
+  await mkdir(downloadPath);
+  await page._client.send("Page.setDownloadBehavior", {
+    behavior: "allow",
+    downloadPath
   });
+  await downloader();
 
-  return formParameters.map(async (params, index) => {
-    // Go to the form page in a new tab after
-    // waiting some time to not abuse the service
-    const page = await browser.newPage();
-    await page.waitFor(index * MILLISECONDS_TO_WAIT_BETWEEN_TABS);
-    await page.goto(formUrl, { waitUntil: "domcontentloaded" });
+  let fileName;
+  while (!fileName || fileName.endsWith(".crdownload")) {
+    await sleep(100);
+    [fileName] = await readdir(downloadPath);
+  }
 
-    // Fill the form
-    return page.evaluate(formFiller, params);
-  });
-};
+  return { fileName, downloadPath };
+}
+
+/**
+ * Downloads all the CSV files in the given page
+ *
+ * @param {any} page Puppeteer page object
+ */
+async function downloadAllCSVs(page) {
+  const spans = await page.$$("span.export.csv");
+
+  for (const span of spans) {
+    const downloaderFunction = () => {
+      console.log("Downloading...");
+      span.click();
+    };
+    const { downloadPath } = await download(page, downloaderFunction);
+    console.log(`Download path: ${downloadPath}\n`);
+  }
+
+  return;
+}
+
+/**
+ * Fills the form of the given page with the given parameters, submits the form,
+ * waits for the result page to load and downloads all the CSV files there
+ *
+ * @param {any} page Puppeteer page object
+ * @param {any} params Form parameters to fill for this page
+ */
+async function fillFormAndDownloadCSVs(page, params) {
+  await page.evaluate(fillForm, params);
+  await page.waitFor(1000);
+  await page.click('[name="btAgregar"]');
+
+  await page.waitFor(1000);
+  await page.click('[type="submit"]');
+  await page.waitForNavigation({ waitUntil: "domcontentloaded" });
+
+  return downloadAllCSVs(page);
+}
+
+module.exports = fillFormAndDownloadCSVs;
