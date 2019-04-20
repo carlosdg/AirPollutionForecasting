@@ -14,7 +14,12 @@ module.exports = function fillForm({
   area = ""
 } = {}) {
   // First year in the select list (index 0)
-  const FIRST_POSSIBLE_YEAR = 2008;
+  const FIRST_POSSIBLE_YEAR = parseInt(
+    Array.from(document.getElementById("selAnioIni").options)
+      .map(option => option.text)
+      .shift(),
+    10
+  );
 
   // Index of the year asked in the select list
   const yearIndex = Math.floor(year - FIRST_POSSIBLE_YEAR);
