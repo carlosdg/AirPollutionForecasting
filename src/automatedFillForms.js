@@ -131,8 +131,10 @@ async function download(page, downloader) {
   await downloader();
 
   let fileName;
+  const timeBeforeNextTry = 100;
+
   while (!fileName || fileName.endsWith(".crdownload")) {
-    await sleep(100);
+    await sleep(timeBeforeNextTry);
     [fileName] = await readdir(downloadPath);
   }
 
@@ -146,17 +148,19 @@ async function download(page, downloader) {
  */
 async function downloadAllCSVs(page) {
   const spans = await page.$$("span.export.csv");
+  const downloadInfos = []
 
   for (const span of spans) {
     const downloaderFunction = () => {
       console.log("Downloading...");
       span.click();
     };
-    const { downloadPath } = await download(page, downloaderFunction);
-    console.log(`Download path: ${downloadPath}\n`);
+    const downloadInfo = await download(page, downloaderFunction);
+    downloadInfos.push(downloadInfo)
+    console.log(`Download path: ${downloadInfo.downloadPath}\n`);
   }
 
-  return;
+  return downloadInfos;
 }
 
 /**
@@ -167,11 +171,13 @@ async function downloadAllCSVs(page) {
  * @param {any} params Form parameters to fill for this page
  */
 async function fillFormAndDownloadCSVs(page, params) {
+  const timeToWaitBeforeClick = 1000;
+
   await page.evaluate(fillForm, params);
-  await page.waitFor(1000);
+  await page.waitFor(timeToWaitBeforeClick);
   await page.click('[name="btAgregar"]');
 
-  await page.waitFor(1000);
+  await page.waitFor(timeToWaitBeforeClick);
   await page.click('[type="submit"]');
   await page.waitForNavigation({ waitUntil: "domcontentloaded" });
 

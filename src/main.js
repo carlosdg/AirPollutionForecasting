@@ -15,19 +15,34 @@ async function main() {
     userDataDir: USER_DATA_DIR
   });
 
+  const timeToWaitForLoads = 1000;
+
   for (let i = 0; i < params.length; ++i) {
     const page = await browser.newPage();
+    const isIterationMultipleOfFive = (i + 1) % 5 === 0;
+
+    if (isIterationMultipleOfFive) {
+      console.log(
+        "Waiting a bit more before continuing to avoid overloading the system\n"
+      );
+      await page.waitFor(timeToWaitForLoads * 10);
+    } else {
+      await page.waitFor(timeToWaitForLoads);
+    }
 
     try {
-      await page.waitFor(1000);
       await page.goto(formUrl, { waitUntil: "domcontentloaded" });
-      await fillFormAndDownloadCSVs(page, params[i]);
+      const downloadInfos = await fillFormAndDownloadCSVs(page, params[i]);
 
-      console.log(`Finished filling form #${i + 1}\n\n`);
-      await page.waitFor(1000);
+      if (!downloadInfos || downloadInfos.length === 0) {
+        console.warn(`[WARN] Nothing to download found in form #${i + 1}\n\n`);
+      }
+
+      await page.waitFor(timeToWaitForLoads);
       await page.close();
+      console.log(`Finished form #${i + 1}\n\n`);
     } catch (error) {
-      console.error(`Error in form #${i + 1}\n\n`, error);
+      console.error(`[ERROR] Error in form #${i + 1}\n\n`, error);
     }
   }
 }
