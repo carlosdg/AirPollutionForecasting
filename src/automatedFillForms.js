@@ -114,16 +114,20 @@ function fillForm({ year = 2015, monthIndex = 0, area = "" } = {}) {
  * progress
  *
  * @param {any} page Puppeteer page object
+ * @param {string} downloadFolderPath Path to the folder to place the downloads
  * @param {any} downloader Function that triggers the download
  */
-async function download(page, downloader) {
+async function download(page, downloadFolderPath, downloader) {
   const randomString = Math.random()
     .toString(36)
     .substr(2, 8);
   const randomFolderName = `download-${randomString}`;
-  const downloadPath = path.resolve(__dirname, "downloads", randomFolderName);
 
-  await mkdir(downloadPath);
+  // Folder to place the unique download. Needed so we can track its download
+  // progress
+  const downloadPath = path.resolve(downloadFolderPath, randomFolderName);
+
+  await mkdir(downloadPath, { recursive: true });
   await page._client.send("Page.setDownloadBehavior", {
     behavior: "allow",
     downloadPath
@@ -145,20 +149,29 @@ async function download(page, downloader) {
  * Downloads all the CSV files in the given page
  *
  * @param {any} page Puppeteer page object
+ * @param {string} downloadFolderPath Path to the folder to place the downloads
  */
-async function downloadAllCSVs(page) {
+async function downloadAllCSVs(page, downloadFolderPath) {
   const spans = await page.$$("span.export.csv");
-  const downloadInfos = []
+  const downloadInfos = [];
 
   for (const span of spans) {
     const downloaderFunction = () => {
       console.log("Downloading...");
       span.click();
     };
-    const downloadInfo = await download(page, downloaderFunction);
-    downloadInfos.push(downloadInfo)
-    console.log(`Download path: ${downloadInfo.downloadPath}\n`);
+    const downloadInfo = await download(
+      page,
+      downloadFolderPath,
+      downloaderFunction
+    );
+    downloadInfos.push(downloadInfo);
   }
+  
+  console.log(`
+Download path: ${downloadFolderPath}
+Downloads. Expected: ${spans.length}. Got: ${downloadInfos.length}
+  `)
 
   return downloadInfos;
 }
@@ -181,7 +194,14 @@ async function fillFormAndDownloadCSVs(page, params) {
   await page.click('[type="submit"]');
   await page.waitForNavigation({ waitUntil: "domcontentloaded" });
 
-  return downloadAllCSVs(page);
+  const downloadFolderPath = path.resolve(
+    __dirname,
+    "downloads",
+    `${params.year}_${params.monthIndex}_${params.area
+      .toLowerCase()
+      .replace(" ", "_")}`
+  );
+  return downloadAllCSVs(page, downloadFolderPath);
 }
 
 module.exports = fillFormAndDownloadCSVs;
