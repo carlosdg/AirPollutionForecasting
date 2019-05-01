@@ -167,11 +167,11 @@ async function downloadAllCSVs(page, downloadFolderPath) {
     );
     downloadInfos.push(downloadInfo);
   }
-  
+
   console.log(`
 Download path: ${downloadFolderPath}
 Downloads. Expected: ${spans.length}. Got: ${downloadInfos.length}
-  `)
+  `);
 
   return downloadInfos;
 }
@@ -194,14 +194,12 @@ async function fillFormAndDownloadCSVs(page, params) {
   await page.click('[type="submit"]');
   await page.waitForNavigation({ waitUntil: "domcontentloaded" });
 
-  const downloadFolderPath = path.resolve(
-    __dirname,
-    "downloads",
-    `${params.year}_${params.monthIndex}_${params.area
-      .toLowerCase()
-      .replace(" ", "_")}`
-  );
-  return downloadAllCSVs(page, downloadFolderPath);
+  const { year, monthIndex, area } = params;
+  const cleanAreaString = area.toLowerCase().replace(" ", "_");
+  const downloadName = `${year}_${monthIndex}_${cleanAreaString}`;
+  const downloadPath = path.resolve(__dirname, "downloads", downloadName);
+
+  return downloadAllCSVs(page, downloadPath);
 }
 
 module.exports = fillFormAndDownloadCSVs;

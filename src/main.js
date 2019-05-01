@@ -16,6 +16,7 @@ async function main() {
   });
 
   const timeToWaitForLoads = 1000;
+  const defaultNavigationTimeout = 60000;
 
   for (let i = 0; i < params.length; ++i) {
     const page = await browser.newPage();
@@ -31,6 +32,7 @@ async function main() {
     }
 
     try {
+      page.setDefaultNavigationTimeout(defaultNavigationTimeout);
       await page.goto(formUrl, { waitUntil: "domcontentloaded" });
       const downloadInfos = await fillFormAndDownloadCSVs(page, params[i]);
 
