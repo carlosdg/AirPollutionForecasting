@@ -1,0 +1,15 @@
+{
+  "name": "downloadcanaryairqualitydata",
+  "version": "1.0.0",
+  "description": "Download air quality data for a data science project",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/main.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^1.14.0"
+  }
+}
