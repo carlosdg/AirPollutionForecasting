@@ -4,6 +4,8 @@ from glob import glob
 
 import pandas as pd
 
+from models import Session, Test
+
 
 def read_csvs(csv_file_paths, options):
     """Read CSVs from the given paths and returns a list of DataFrames
@@ -47,3 +49,11 @@ def read_month_csvs(folder_path):
         result_data_frame = pd.concat([result_data_frame, data_frame], axis=1)
 
     return result_data_frame
+
+
+if __name__ == "__main__":
+    session = Session()
+    test = Test(name="Hello")
+
+    session.add(test)
+    session.commit()
