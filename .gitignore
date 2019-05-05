@@ -3,6 +3,7 @@ puppeteer_user_data_dir
 downloads
 temp
 test.db
+.vscode
 
 postgres_data
 __latexindent_temp.tex
