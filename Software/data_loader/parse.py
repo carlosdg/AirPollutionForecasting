@@ -5,7 +5,7 @@ from glob import glob
 
 import pandas as pd
 
-from models import DimDuration, Session
+from models import DimStation, Session
 
 
 def read_csvs(csv_file_paths, options):
@@ -54,7 +54,8 @@ def read_month_csvs(folder_path):
 
 if __name__ == "__main__":
     session = Session()
-    test = DimDuration(1)
+    test = DimStation('CaNaY GOVERNMENT', 'CEPSA',
+                      'SANTA CRUZ - LA LAGUNA', 'tome caNO')
 
     try:
         session.add(test)
