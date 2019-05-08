@@ -5,7 +5,7 @@ from glob import glob
 
 import pandas as pd
 
-from models import DimTime, Session
+from models import DimDuration, Session
 
 
 def read_csvs(csv_file_paths, options):
@@ -54,7 +54,7 @@ def read_month_csvs(folder_path):
 
 if __name__ == "__main__":
     session = Session()
-    test = DimTime(23)
+    test = DimDuration(1)
 
     try:
         session.add(test)
