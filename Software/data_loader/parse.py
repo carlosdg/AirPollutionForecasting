@@ -1,10 +1,11 @@
+import logging
 import os
 from datetime import date
 from glob import glob
 
 import pandas as pd
 
-from models import Session, Test
+from models import DimDate, Session
 
 
 def read_csvs(csv_file_paths, options):
@@ -53,7 +54,10 @@ def read_month_csvs(folder_path):
 
 if __name__ == "__main__":
     session = Session()
-    test = Test(name="Hello")
+    test = DimDate(date.today())
 
-    session.add(test)
-    session.commit()
+    try:
+        session.add(test)
+        session.commit()
+    except:
+        logging.warn(f"Row '{test}' not added")
