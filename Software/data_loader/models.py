@@ -157,7 +157,7 @@ class DimTime(Base):
     __tablename__ = "dim_time"
 
     id = Column(Integer, primary_key=True)
-    hour = Column(Integer, nullable=False)
+    hour = Column(Integer, nullable=False, unique=True)
 
     def __init__(self, hour):
         if hour < 0 or hour > 23:
