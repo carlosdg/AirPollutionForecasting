@@ -211,6 +211,9 @@ class DimDuration(Base):
         self.duration_type = DimDuration.hour_representations.get(
             duration_hours)
 
+    def __repr__(self):
+        return f'DimDuration(duration_hours={self.duration_hours})'
+
 
 class DimStation(Base):
     """Station dimension table
@@ -261,6 +264,9 @@ class DimStation(Base):
         self.latitude = latitude
         self.longitude = longitude
         self.altitude = altitude
+
+    def __repr__(self):
+        return f'DimStation(name={self.name})'
 
 
 class DimMeasurementType(Base):
