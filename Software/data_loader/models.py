@@ -146,6 +146,15 @@ class DimTime(Base):
     This table represent a time dimension table in a star schema. It is used to
     represent the possible hours in a day. That being integers in range [0, 23]
 
+    Note that this is separate from the Date dimension for a better memory
+    management. Why? Having date and hours in the same table means that for each
+    day we have 24 rows, while this way we only have one row per day in the date
+    dimension and only 24 fixed rows in the time dimension. In reality the
+    number of dates that we are going to use aren't that much and we could go
+    with the other approach but if later we can add more granular measures
+    (having measures each 15 minutes for example) then this strategy would be
+    better for having less redundant rows
+
     Attributes:
         __tablename__: str
            Name of the generated Table in the database
