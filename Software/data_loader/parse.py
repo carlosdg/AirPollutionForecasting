@@ -5,7 +5,7 @@ from glob import glob
 
 import pandas as pd
 
-from models import DimStation, Session
+from models import DimDate, DimTime, DimDuration, DimStation, DimMeasurementType, FactMeasure, Session
 
 
 def read_csvs(csv_file_paths, options):
@@ -54,11 +54,20 @@ def read_month_csvs(folder_path):
 
 if __name__ == "__main__":
     session = Session()
-    test = DimStation('CaNaY GOVERNMENT', 'CEPSA',
-                      'SANTA CRUZ - LA LAGUNA', 'tome caNO')
+    dimensions_rows = [
+        DimDate(date.today()),
+        DimTime(8),
+        DimDuration(1),
+        DimStation('CANARY GOVERNMENT', 'CEPSA',
+                   'SANTA CRUZ - LA LAGUNA', 'TOME CANO'),
+        DimMeasurementType('T', 'TEMPERATURE', 'CELSIUS DEGREES'),
+    ]
+    measure = FactMeasure(1, 1, 1, 1, 1, 3.4)
 
     try:
-        session.add(test)
+        session.add_all(dimensions_rows)
+        session.add(measure)
         session.commit()
     except:
-        logging.warn(f"Row '{test}' not added")
+        logging.warn(f"Rows not added")
+        session.rollback()
