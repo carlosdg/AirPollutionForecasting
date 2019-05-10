@@ -13,17 +13,34 @@ This is a helper program for a project. The goal was to use air quality data for
 - Fill the `parameters.json` file with the parameters that you want to insert into the form. The JSON object representing the parameters has to have the following structure:
 
   ```json
-    {
-      "year": 2016,
-      "monthIndex": 0,
-      "area": "casa cuna"
-    },
+  {
+    "area": "casa cuna",
+    "dates": [{ "year": 2019, "monthIndex": 3 }]
+  }
   ```
 
   Where `year` is an integer between the first possible year and the current year (included), `monthIndex` is an integer between 0 and 11 (included, in case of the year being the current year the monthIndex cannot be passed than the current month). And `area` is the area exact name (case insensitive).
 
-  `parameters.json` expects an array of these objects.
+  `parameters.json` expects an array of these objects. Example:
 
-- Run with `npm start`. A chromium browser will open and progressively fill each form, go to the result page and download all the CSVs. Each CSV will be located inside `src/downloads`
+```json
+[
+  {
+    "area": "casa cuna",
+    "dates": [{ "year": 2019, "monthIndex": 3 }]
+  },
+  {
+    "area": "tome cano",
+    "dates": [
+      { "year": 2019, "monthIndex": 0 },
+      { "year": 2019, "monthIndex": 1 },
+      { "year": 2019, "monthIndex": 2 },
+      { "year": 2019, "monthIndex": 3 }
+    ]
+  }
+]
+```
+
+- Run with `npm start`. A chromium browser will open and progressively fill each form, go to the result page and download all the CSVs. Each CSV will be located inside a `downloads` folder located where you run the script
 
 **Note:** The browser's user data is store in a `src/puppeteer_user_data_dir` directory. This is in case the user wants to customize some settings they will be persisted.
