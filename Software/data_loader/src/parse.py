@@ -5,9 +5,6 @@ from glob import glob
 
 import pandas as pd
 
-from models import (DimDate, DimDuration, DimMeasurementType, DimStation,
-                    DimTime, FactMeasure, Session)
-
 
 def parse_ending_datetime(datetime_str):
     """Returns a datetime object representing the start of the given datetime
