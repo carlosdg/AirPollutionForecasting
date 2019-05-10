@@ -183,10 +183,10 @@ Downloads. Expected: ${spans.length}. Got: ${downloadInfos.length}
  * @param {any} page Puppeteer page object
  * @param {any} params Form parameters to fill for this page
  */
-async function fillFormAndDownloadCSVs(page, params) {
+async function fillFormAndDownloadCSVs(page, area, date) {
   const timeToWaitBeforeClick = 1000;
 
-  await page.evaluate(fillForm, params);
+  await page.evaluate(fillForm, { area, ...date });
   await page.waitFor(timeToWaitBeforeClick);
   await page.click('[name="btAgregar"]');
 
@@ -194,10 +194,18 @@ async function fillFormAndDownloadCSVs(page, params) {
   await page.click('[type="submit"]');
   await page.waitForNavigation({ waitUntil: "domcontentloaded" });
 
-  const { year, monthIndex, area } = params;
+  const { year, monthIndex } = date;
   const cleanAreaString = area.toLowerCase().replace(" ", "_");
-  const downloadName = `${year}_${monthIndex}_${cleanAreaString}`;
-  const downloadPath = path.resolve(__dirname, "downloads", downloadName);
+  const areaDownloadFolderPath = path.resolve("downloads", cleanAreaString);
+
+  await mkdir(areaDownloadFolderPath, { recursive: true });
+
+  const monthString = (monthIndex + 1).toString().padStart(2, "0");
+  const monthDataFolderName = `${year}_${monthString}`;
+  const downloadPath = path.resolve(
+    areaDownloadFolderPath,
+    monthDataFolderName
+  );
 
   return downloadAllCSVs(page, downloadPath);
 }
