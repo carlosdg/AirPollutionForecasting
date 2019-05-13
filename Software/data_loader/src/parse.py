@@ -1,5 +1,4 @@
 import datetime as dt
-import logging
 import os
 from glob import glob
 
