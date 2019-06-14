@@ -41,5 +41,13 @@ def insert_month_data_to_warehouse(data_path):
 
 
 if __name__ == "__main__":
-    path = './Software/pollution_data_downloader/downloads/tome_cano/2019_01'
+    import sys
+    args = sys.argv[1:]
+
+    if len(args) > 0:
+        path = args[0]
+    else:
+        path = './Software/pollution_data_downloader/downloads/tome_cano/2019_01'
+
+    print(f'Path to the month data: {path}')
     insert_month_data_to_warehouse(path)
