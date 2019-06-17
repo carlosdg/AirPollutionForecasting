@@ -1,43 +1,96 @@
 from models import (DimDate, DimDuration, DimMeasurementType, DimStation,
                     DimTime, FactMeasure, Session)
 from parse import read_month_csvs
+from insert_dimension_rows import insert_dimension_defaults
 
 
-def insert_month_data_to_warehouse(data_path):
+def query(session, Dim, **kwargs):
+    """Helper function that returns the first row from the given 
+    dimension table given the keyword arg restrictions
+
+    Arguments:
+        session {} -- SQLAlchemy session
+        Dim {} -- SQLAlchemy class representing a dimension table
+
+    Returns:
+        object -- First row in the table that fulfills the given
+        restrictions
+    """
+    return session.query(Dim).filter_by(**kwargs).first()
+
+
+def insert_row(session, date, value, duration_hours, name, short_measure_name):
+    """Inserts a row to the fact table representing a measure taken
+
+    Arguments:
+        session {} -- SQLAlchemy session
+        date {datetime.datetime} -- Start date of the measure
+        value {float} -- Measure value
+        duration_hours {int} -- Duration hours
+        name {str} -- Station name
+        short_measure_name {str} -- Measure name
+    """
+    date_row = query(session, DimDate, date=date)
+    hour_row = query(session, DimTime, hour=date.hour)
+    duration_row = query(session, DimDuration, duration_hours=duration_hours)
+    station_row = query(session, DimStation, name=name)
+    measurement_type_row = query(
+        session, DimMeasurementType, short_measure_name=short_measure_name)
+
+    fact_row = FactMeasure(
+        date_id=date_row.id,
+        time_id=hour_row.id,
+        duration_id=duration_row.id,
+        source_id=station_row.id,
+        measurement_type_id=measurement_type_row.id,
+        value=value
+    )
+
+    session.add(fact_row)
+    session.commit()
+
+
+def extract_measure_name(column_name):
+    """Returns the short measurement name that the given column name represents
+
+    This is needed because the column name can be different than just the
+    measurement name, it can include the station name for example. If no
+    appropriate measure name if found an empty string will be returned instead
+
+    Arguments: column_name {str} -- Column name where to extract the measurement
+    name from
+
+    Returns: str -- Name of the measurement that the given column represents or
+    an empty string if no measure could be found
+    """
+    column_name = column_name.upper()
+
+    if 'PM10' in column_name:
+        return "PM10"
+    elif 'PM2.5' in column_name or 'PM2,5' in column_name:
+        return "PM2.5"
+    elif 'O3' in column_name:
+        return "O3"
+    elif 'SO2' in column_name:
+        return "SO2"
+    elif 'NO2' in column_name:
+        return "NO2"
+    else:
+        return ""
+
+
+def insert_data_to_warehouse(session, data_frame, station_name):
     """
         TODO: 
-            - Do the same for PM2.5, O3, SO2 & NO2
-            - Take the station name from the folder name
+            - Take the station name as argument
             - Define a function that returns the duration_hours based on the
             station
     """
-    data_frame = read_month_csvs(data_path)
-    session = Session()
-
     for series_name, series in data_frame.items():
-        if 'PM10' in series_name:
-            for date, value in series.iteritems():
-                date_row = session.query(DimDate).filter_by(date=date).first()
-                hour_row = session.query(DimTime).filter_by(
-                    hour=date.hour).first()
-                duration_row = session.query(
-                    DimDuration).filter_by(duration_hours=1).first()
-                station_row = session.query(
-                    DimStation).filter_by(name="TOME CANO").first()
-                measurement_type_row = session.query(
-                    DimMeasurementType).filter_by(short_measure_name="PM10").first()
-
-                fact_row = FactMeasure(
-                    date_id=date_row.id,
-                    time_id=hour_row.id,
-                    duration_id=duration_row.id,
-                    source_id=station_row.id,
-                    measurement_type_id=measurement_type_row.id,
-                    value=value
-                )
-
-                session.add(fact_row)
-                session.commit()
+        for date, value in series.iteritems():
+            measure_name = extract_measure_name(series_name)
+            if measure_name != "":
+                insert_row(session, date, value, 1, station_name, measure_name)
 
 
 if __name__ == "__main__":
@@ -50,4 +103,9 @@ if __name__ == "__main__":
         path = './Software/pollution_data_downloader/downloads/tome_cano/2019_01'
 
     print(f'Path to the month data: {path}')
-    insert_month_data_to_warehouse(path)
+
+    data_frame = read_month_csvs(path)
+    session = Session()
+
+    insert_dimension_defaults(session)
+    insert_data_to_warehouse(session, data_frame, "TOME CANO")
