@@ -20,7 +20,7 @@ def daterange(start_date, end_date):
 
 def _get_date_rows():
     start_date = dt.datetime(2015, 1, 1)
-    end_date = dt.datetime(2019, 3, 1)
+    end_date = dt.datetime(2020, 1, 1)
     return [DimDate(date) for date in daterange(start_date, end_date)]
 
 

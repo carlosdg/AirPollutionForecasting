@@ -91,9 +91,9 @@ def insert_data(session, data_frame, station_name, measure_duration):
         1h or 24h)
     """
     for series_name, series in data_frame.items():
-        for date, value in series.iteritems():
-            measure_name = extract_measure_name(series_name)
-            if measure_name != "":
+        measure_name = extract_measure_name(series_name)
+        if measure_name != "":
+            for date, value in series.iteritems():
                 insert_row(session, date, value, measure_duration,
                            station_name, measure_name)
 
