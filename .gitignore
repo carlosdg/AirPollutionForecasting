@@ -4,6 +4,7 @@ downloads
 temp
 test.db
 .vscode
+private
 
 postgres_data
 __latexindent_temp.tex
