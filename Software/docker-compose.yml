@@ -9,6 +9,8 @@ services:
       POSTGRES_DB: warehouse_db
     volumes:
       - ./private/postgres_data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
 
   # Web app to interface more comfortably with the warehouse
   adminer:

@@ -19,19 +19,22 @@ def query(session, Dim, **kwargs):
     return session.query(Dim).filter_by(**kwargs).first()
 
 
-def insert_row(session, date, value, duration_hours, name, short_measure_name):
-    """Inserts a row to the fact table representing a measure taken
+def create_row(session, datetime, value, duration_hours, name, short_measure_name):
+    """Creates a row to the fact table representing a measure taken
 
     Arguments:
         session {} -- SQLAlchemy session
-        date {datetime.datetime} -- Start date of the measure
+        datetime {datetime.datetime} -- Start date of the measure
         value {float} -- Measure value
         duration_hours {int} -- Duration hours
         name {str} -- Station name
         short_measure_name {str} -- Measure name
+
+    Returns:
+        object -- Fact table row created
     """
-    date_row = query(session, DimDate, date=date)
-    hour_row = query(session, DimTime, hour=date.hour)
+    date_row = query(session, DimDate, date=datetime.date())
+    hour_row = query(session, DimTime, hour=datetime.hour)
     duration_row = query(session, DimDuration, duration_hours=duration_hours)
     station_row = query(session, DimStation, name=name)
     measurement_type_row = query(
@@ -46,8 +49,7 @@ def insert_row(session, date, value, duration_hours, name, short_measure_name):
         value=value
     )
 
-    session.add(fact_row)
-    session.commit()
+    return fact_row
 
 
 def extract_measure_name(column_name):
@@ -94,8 +96,11 @@ def insert_data(session, data_frame, station_name, measure_duration):
         measure_name = extract_measure_name(series_name)
         if measure_name != "":
             for date, value in series.iteritems():
-                insert_row(session, date, value, measure_duration,
-                           station_name, measure_name)
+                fact_row = create_row(session, date, value, measure_duration,
+                                      station_name, measure_name)
+                session.add(fact_row)
+
+            session.commit()
 
 
 if __name__ == "__main__":

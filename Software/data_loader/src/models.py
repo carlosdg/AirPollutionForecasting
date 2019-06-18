@@ -1,8 +1,16 @@
 from sqlalchemy import create_engine, Column, Integer, Numeric, Boolean, String, Date, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+import os
 
-engine = create_engine('sqlite:///test.db')
+verbose_run = False
+try:
+    connection_string = os.environ['CONNECTION_STRING']
+    verbose_run = os.environ['VERBOSE'] == "True"
+except:
+    connection_string = 'postgresql://user:pass@localhost:5432/warehouse_db'
+
+engine = create_engine(connection_string, echo=verbose_run)
 Session = sessionmaker(bind=engine)
 Base = declarative_base()
 
