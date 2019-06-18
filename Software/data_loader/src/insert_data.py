@@ -79,33 +79,44 @@ def extract_measure_name(column_name):
         return ""
 
 
-def insert_data_to_warehouse(session, data_frame, station_name):
-    """
-        TODO: 
-            - Take the station name as argument
-            - Define a function that returns the duration_hours based on the
-            station
+def insert_data(session, data_frame, station_name, measure_duration):
+    """Inserts the data of the given data frame to the warehose 
+
+    Arguments:
+        session {} -- SQLAlchemy session connected to the data warehouse
+        data_frame {} -- Pandas' data frame with the data to store
+        station_name {str} -- Name of the station where the given data was
+        retrieved
+        measure_duration {int} -- Number of hours that the measure took (e.g.
+        1h or 24h)
     """
     for series_name, series in data_frame.items():
         for date, value in series.iteritems():
             measure_name = extract_measure_name(series_name)
             if measure_name != "":
-                insert_row(session, date, value, 1, station_name, measure_name)
+                insert_row(session, date, value, measure_duration,
+                           station_name, measure_name)
 
 
 if __name__ == "__main__":
     import sys
-    args = sys.argv[1:]
 
-    if len(args) > 0:
-        path = args[0]
-    else:
-        path = './Software/pollution_data_downloader/downloads/tome_cano/2019_01'
+    if len(sys.argv) != 4:
+        raise RuntimeError("""
+            USAGE: python insert_data.py <path_to_data> <station_name> <measure_duration>
+            e.g: python insert_data.py tome_cano/2019_01 "TOME CANO" 1
+        """)
 
-    print(f'Path to the month data: {path}')
+    [path, station_name, measure_duration] = sys.argv[1:]
+
+    print(f"""
+        Path to the month data: {path}
+        Station name: {station_name}
+        Measure duration: {measure_duration}
+    """)
 
     data_frame = read_month_csvs(path)
     session = Session()
 
     insert_dimension_defaults(session)
-    insert_data_to_warehouse(session, data_frame, "TOME CANO")
+    insert_data(session, data_frame, station_name, measure_duration)
