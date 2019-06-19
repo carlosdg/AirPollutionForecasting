@@ -17,3 +17,14 @@ services:
     image: adminer:4.7
     ports:
       - 8080:8080
+
+  # Jupyter server
+  jupyter:
+    image: jupyter
+    build: ./jupyter
+    ports:
+      - 8888:8888
+    volumes:
+      - ./jupyter/notebooks:/notebooks
+    environment:
+      CONNECTION_STRING: "postgresql://user:pass@warehouse:5432/warehouse_db"
