@@ -318,7 +318,7 @@ class DimMeasurementType(Base):
     def __init__(self, short_name, full_name, unit):
         self.short_measure_name = short_name.upper()
         self.measure_name = full_name.upper()
-        self.unit = unit.upper()
+        self.unit = unit
 
     def __repr__(self):
         return f'DimMeasurementType(short_measure_name={self.short_measure_name})'

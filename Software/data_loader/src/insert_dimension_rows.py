@@ -38,23 +38,23 @@ def _get_duration_rows():
 def _get_measurement_type_rows():
     return [
         DimMeasurementType(
-            'TMIN', 'MINIMUM TEMPERATURE', 'CELSIUS DEGREES'),
+            'TMIN', 'MINIMUM TEMPERATURE', '°C'),
         DimMeasurementType('TMINHOUR', 'HOUR OF MINIMUM TEMPERATURE', 'h'),
         DimMeasurementType(
-            'TMAX', 'MAXIMUM TEMPERATURE', 'CELSIUS DEGREES'),
+            'TMAX', 'MAXIMUM TEMPERATURE', '°C'),
         DimMeasurementType('TMAXHOUR', 'HOUR OF MAXIMUM TEMPERATURE', 'h'),
         DimMeasurementType('WSMAX', 'MAXIMUM WIND SPEED', 'm/s'),
         DimMeasurementType(
-            'WSMAXDIR', 'DIRECTION OF MAXIMUM WIND SPEED', 'DEGREES'),
+            'WSMAXDIR', 'DIRECTION OF MAXIMUM WIND SPEED', '°'),
         DimMeasurementType('WSMAXHOUR', 'HOUR OF MAXIMUM WIND SPEED', 'h'),
         DimMeasurementType('SUN', 'HOURS OF SUN', 'h'),
         DimMeasurementType('PMIN', 'MINIMUM PRESSURE', 'mb'),
         DimMeasurementType('PMINHOUR', 'HOUR OF MINIMUM PRESSURE', 'h'),
         DimMeasurementType('PMAX', 'MAXIMUM PRESSURE', 'mb'),
         DimMeasurementType('PMAXHOUR', 'HOUR OF MAXIMUM PRESSURE', 'h'),
-        DimMeasurementType('T', 'TEMPERATURE', 'CELSIUS DEGREES'),
+        DimMeasurementType('T', 'TEMPERATURE', '°C'),
         DimMeasurementType('P', 'ATMOSPHERIC PRESSURE', 'mb'),
-        DimMeasurementType('WD', 'WIND DIRECTION', 'DEGREES'),
+        DimMeasurementType('WD', 'WIND DIRECTION', '°'),
         DimMeasurementType('WS', 'WIND SPEED', 'm/s'),
         DimMeasurementType('RH', 'RELATIVE HUMIDITY', '%'),
         DimMeasurementType('PP', 'PRECIPITATION', 'l/m2'),
