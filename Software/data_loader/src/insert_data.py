@@ -67,16 +67,34 @@ def extract_measure_name(column_name):
     """
     column_name = column_name.upper()
 
-    if 'PM10' in column_name:
+    # Pollution data
+    if ' PM10 ' in column_name:
         return "PM10"
-    elif 'PM2.5' in column_name or 'PM2,5' in column_name:
+    elif ' PM2.5 ' in column_name or ' PM2,5 ' in column_name:
         return "PM2.5"
-    elif 'O3' in column_name:
+    elif ' O3 ' in column_name:
         return "O3"
-    elif 'SO2' in column_name:
+    elif ' SO2 ' in column_name:
         return "SO2"
-    elif 'NO2' in column_name:
+    elif ' NO2 ' in column_name:
         return "NO2"
+
+    # Weather data (wind speed & direction, relative humidity, precipitation,
+    # pressure, temperature and solar radiation)
+    elif ' VV ' in column_name:
+        return 'WS'
+    elif ' DD ' in column_name:
+        return 'WD'
+    elif ' HR ' in column_name:
+        return 'RH'
+    elif ' LL ' in column_name:
+        return 'PP'
+    elif ' PRB ' in column_name:
+        return 'P'
+    elif ' TMP ' in column_name:
+        return 'T'
+    elif ' RS ' in column_name:
+        return 'SR'
     else:
         return ""
 
