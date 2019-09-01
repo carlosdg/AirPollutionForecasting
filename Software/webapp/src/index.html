@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Air Pollution Forecasting</title>
+    <link rel="stylesheet" href="styles/index.scss" />
+  </head>
+  <body>
+    <section class="hero is-info is-medium">
+      <div class="hero-head">
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <a class="navbar-item banner-calligraphy" href="/">
+                APF
+              </a>
+              <span class="navbar-burger burger" data-target="navbarMenuHero">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </div>
+            <div id="navbarMenuHero" class="navbar-menu">
+              <div class="navbar-end">
+                <span class="navbar-item">
+                  <a
+                    class="button is-info is-inverted"
+                    href="https://github.com/carlosdg/AirPollutionForecasting"
+                  >
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Code repository</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <p class="title">
+            Air Pollution Forecasting
+          </p>
+          <p class="subtitle">
+            See pollutant concentrations and forecasts for future ones in
+            Tenerife
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-foot">
+        <nav class="tabs is-boxed is-fullwidth is-centered">
+          <div class="container">
+            <ul>
+              <li data-content-tab="tabAbout">
+                <a>About</a>
+              </li>
+              <li data-content-tab="tabMeasures" class="is-active">
+                <a>Measures</a>
+              </li>
+              <li data-content-tab="tabForecast">
+                <a>Forecast</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <main class="section">
+      <section
+        id="tabAbout"
+        class="container content-tab"
+        style="display: none"
+      >
+        <p>
+          About Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+          distinctio maxime minima maiores beatae rem inventore aliquid, sed
+          odit consectetur quibusdam veniam harum sapiente at quidem est neque
+          magni ipsum!
+        </p>
+      </section>
+
+      <section id="tabMeasures" class="container content-tab">
+        <p>
+          Here you can find the latest measures stored in the system. The list
+          goes from the latest measures to older ones. You can use the
+          <em>Previous</em> and <em>Next</em> buttons to see more. Also you can
+          select the measure that you like by clicking on the name, next to
+          <em>Date & Time</em>
+        </p>
+
+        <div class="section">
+          <table class="table is-hoverable is-striped" style="margin: auto">
+            <thead>
+              <tr>
+                <th>Date & Time</th>
+                <th>
+                  <div class="select is-narrow">
+                    <select name="select-variable" id="select-variable">
+                      <option value="Loading">Loading...</option>
+                    </select>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="measures-container">
+              <tr>
+                <td colspan="2" class="has-text-centered">Loading...</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th colspan="3">
+                  <nav
+                    class="pagination"
+                    role="navigation"
+                    aria-label="pagination"
+                  >
+                    <a id="pagination-prev" class="pagination-previous"
+                      >Previous</a
+                    >
+                    <a id="pagination-next" class="pagination-next">Next</a>
+                  </nav>
+                </th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+
+      <section
+        id="tabForecast"
+        class="container content-tab"
+        style="display: none"
+      >
+        <p>
+          Forecast Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Numquam distinctio maxime minima maiores beatae rem inventore aliquid,
+          sed odit consectetur quibusdam veniam harum sapiente at quidem est
+          neque magni ipsum!
+        </p>
+      </section>
+    </main>
+
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
