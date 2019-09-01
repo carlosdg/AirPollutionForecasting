@@ -1,4 +1,9 @@
 /**
+ * Imports
+ */
+import bulmaCalendar from "bulma-calendar/dist/js/bulma-calendar.min.js";
+
+/**
  * Hamburger button
  */
 const hamburgerButton = document.querySelector(".burger");
@@ -106,3 +111,21 @@ function initMeasureTable() {
 }
 
 fillMeasureVariableSelect().then(initMeasureTable);
+
+/**
+ * Calendar
+ */
+const calendar = bulmaCalendar.attach('[type="date"]', {
+  type: "datetime",
+  color: "info",
+  dateFormat: "YYYY/MM/DD",
+  displayMode: "inline",
+  startDate: Date.now(),
+  showTodayButton: false,
+  minuteSteps: 60,
+  validateLabel: "Ok"
+})[0];
+
+calendar.on("select", ({ data }) => {
+  console.log(data.value());
+});

@@ -57,10 +57,10 @@
               <li data-content-tab="tabAbout">
                 <a>About</a>
               </li>
-              <li data-content-tab="tabMeasures" class="is-active">
+              <li data-content-tab="tabMeasures">
                 <a>Measures</a>
               </li>
-              <li data-content-tab="tabForecast">
+              <li data-content-tab="tabForecast" class="is-active">
                 <a>Forecast</a>
               </li>
             </ul>
@@ -83,7 +83,11 @@
         </p>
       </section>
 
-      <section id="tabMeasures" class="container content-tab">
+      <section
+        id="tabMeasures"
+        class="container content-tab"
+        style="display: none"
+      >
         <p>
           Here you can find the latest measures stored in the system. The list
           goes from the latest measures to older ones. You can use the
@@ -131,17 +135,16 @@
         </div>
       </section>
 
-      <section
-        id="tabForecast"
-        class="container content-tab"
-        style="display: none"
-      >
+      <section id="tabForecast" class="container content-tab">
         <p>
-          Forecast Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Numquam distinctio maxime minima maiores beatae rem inventore aliquid,
-          sed odit consectetur quibusdam veniam harum sapiente at quidem est
-          neque magni ipsum!
+          The forecast will be for 24 hours including the given time. Note that
+          if the system doesn't have the measures for the 24 previous hours from
+          the given date it cannot be done
         </p>
+
+        <div class="section flex-center">
+          <input type="date" />
+        </div>
       </section>
     </main>
 
