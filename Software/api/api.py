@@ -1,7 +1,9 @@
 import os
 import datetime as dt
 import pandas as pd
+import simplejson
 from flask import Flask, jsonify
+from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 from ml import preprocess_data, forecast_model
 
@@ -11,6 +13,7 @@ except:
     connection_string = "postgresql://user:pass@localhost:5432/warehouse_db"
 
 app = Flask(__name__)
+CORS(app)
 app.config["SQLALCHEMY_DATABASE_URI"] = connection_string
 db = SQLAlchemy(app)
 db.reflect()
@@ -28,21 +31,9 @@ measures_query = """
             ON ds.id = fm.source_id
     WHERE ds.name = 'TOME CANO'
         AND dmt.short_measure_name = :variable
-        AND date >= :start_date
-        AND date <= :end_date
-        AND hour >= :start_hour
-        AND hour <= :end_hour
-"""
-
-date_ranges_query = """
-    SELECT  MIN(date) as min_date, 
-        MAX(date) as max_date
-    FROM fact_measure fm 
-        JOIN dim_date dd
-            ON dd.id = fm.date_id
-        JOIN dim_station ds
-            ON ds.id = fm.source_id
-    WHERE ds.name = 'TOME CANO'
+    ORDER BY date DESC, hour DESC
+    LIMIT :limit
+    OFFSET :offset
 """
 
 variable_names_query = """
@@ -79,34 +70,23 @@ def get_meta():
     names = db.session.execute(variable_names_query)
     names = [row[0] for row in names]
 
-    limits = db.session.execute(date_ranges_query)
-    limits = list(limits)
-
-    return jsonify({
-        'measure_names': names,
-        'min_date': limits[0][0],
-        'max_date': limits[0][1]
-    })
+    return jsonify({ 'measure_names': names })
 
 
-@app.route('/apf/api/v1.0/measures/<string:variable>/<string:start>/<string:end>', methods=['GET'])
-def get_measures(variable, start, end):
-    start = dt.datetime.strptime(start, '%Y-%m-%d_%H')
-    end = dt.datetime.strptime(end, '%Y-%m-%d_%H')
+@app.route('/apf/api/v1.0/measures/<string:variable>/<string:last>/<string:offset>', methods=['GET'])
+def get_measures(variable, last, offset):
     parameters = {
         'variable': variable,
-        'start_date': start.strftime("%Y/%m/%d"),
-        'start_hour': start.hour,
-        'end_date': end.strftime("%Y/%m/%d"),
-        'end_hour': end.hour,
+        'limit': last,
+        'offset': offset
     }
     results = db.session.execute(measures_query, parameters)
     output = [{
-        'date': dt.datetime.combine(date=row[0], time=dt.time(hour=row[1])),
+        'date': str(dt.datetime.combine(date=row[0], time=dt.time(hour=row[1]))),
         'value': float(row[2])
     } for row in results]
 
-    return jsonify(output)
+    return simplejson.dumps(output, ignore_nan=True)
 
 
 @app.route('/apf/api/v1.0/forecast/24/<string:timestamp>', methods=['GET'])
