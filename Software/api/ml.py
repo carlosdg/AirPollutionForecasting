@@ -25,7 +25,7 @@ def preprocess_data(data):
     df = df.reindex(full_datetime_range)
 
     # Input missing data
-    df_clean = df.interpolate(method="linear")
+    df_clean = df.interpolate(method="linear").fillna(0)
 
     # Create the features (put the values for the 24h in columns)
     def get_shifted_df(shift):

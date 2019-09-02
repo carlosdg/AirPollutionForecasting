@@ -133,12 +133,14 @@ function initMeasureTable() {
 fillMeasureVariableSelect().then(initMeasureTable);
 
 /**
- * Calendar
+ * Calendar & forecasts
  */
+const forecastContainer = document.getElementById("forecast-container");
 const calendar = bulmaCalendar.attach('[type="date"]', {
   type: "datetime",
   color: "info",
-  dateFormat: "YYYY/MM/DD",
+  dateFormat: "YYYY-MM-DD",
+  timeFormat: "HH",
   displayMode: "inline",
   startDate: Date.now(),
   showTodayButton: false,
@@ -147,5 +149,14 @@ const calendar = bulmaCalendar.attach('[type="date"]', {
 })[0];
 
 calendar.on("select", ({ data }) => {
-  console.log(data.value());
+  const datetime = data.value().replace(" ", "_");
+
+  return fetch(`${API_BASE_URL}/apf/api/v1.0/forecast/24/${datetime}`)
+    .then(res => res.json())
+    .then(({ pred }) => {
+      forecastContainer.innerText = pred.toFixed(2);
+    })
+    .catch(() => {
+      forecastContainer.innerText = "null";
+    });
 });
