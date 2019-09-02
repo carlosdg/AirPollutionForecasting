@@ -54,13 +54,13 @@
         <nav class="tabs is-boxed is-fullwidth is-centered">
           <div class="container">
             <ul>
-              <li data-content-tab="tabAbout">
+              <li data-content-tab="tabAbout" class="is-active">
                 <a>About</a>
               </li>
               <li data-content-tab="tabMeasures">
                 <a>Measures</a>
               </li>
-              <li data-content-tab="tabForecast" class="is-active">
+              <li data-content-tab="tabForecast">
                 <a>Forecast</a>
               </li>
             </ul>
@@ -70,16 +70,15 @@
     </section>
 
     <main class="section">
-      <section
-        id="tabAbout"
-        class="container content-tab"
-        style="display: none"
-      >
+      <section id="tabAbout" class="container content-tab">
         <p>
-          About Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-          distinctio maxime minima maiores beatae rem inventore aliquid, sed
-          odit consectetur quibusdam veniam harum sapiente at quidem est neque
-          magni ipsum!
+          This application is part of a project whose purpose is to forecast
+          future concentrations of particulate matter in Tenerife atmosphere.
+        </p>
+        <p>
+          You can find the latest measures available in the
+          <em>Measures</em> tab. And you can see the forecasts for the next 24h
+          of PM2.5 in the <em>Forecast</em> tab
         </p>
       </section>
 
@@ -135,7 +134,11 @@
         </div>
       </section>
 
-      <section id="tabForecast" class="container content-tab">
+      <section
+        id="tabForecast"
+        class="container content-tab"
+        style="display: none"
+      >
         <p>
           The forecast will be for 24 hours including the given time. Note that
           if the system doesn't have the measures for the 24 previous hours from
