@@ -28,3 +28,18 @@ services:
       - ./jupyter/notebooks:/notebooks
     environment:
       CONNECTION_STRING: "postgresql://user:pass@warehouse:5432/warehouse_db"
+
+  # API that connects to the warehouse and allows retrieving information as well
+  # as make forecasts
+  api:
+    image: api
+    build: ./api
+    depends_on:
+      - warehouse
+    restart: always
+    ports:
+      - 5000:5000
+    volumes:
+      - ./api:/home/api
+    environment:
+      CONNECTION_STRING: "postgresql://user:pass@warehouse:5432/warehouse_db"

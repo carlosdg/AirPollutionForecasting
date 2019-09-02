@@ -36,5 +36,5 @@ def preprocess_data(data):
     return X.values.reshape(1, -1)
 
 
-with open('forecast_24_model.pkl', 'rb') as f:
+with open('ml_models/forecast_24_model.pkl', 'rb') as f:
     forecast_model = pickle.load(f)
