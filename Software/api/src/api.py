@@ -7,10 +7,8 @@ from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 from ml import preprocess_data, forecast_model
 
-try:
-    connection_string = os.environ["CONNECTION_STRING"]
-except:
-    connection_string = "postgresql://user:pass@localhost:5432/warehouse_db"
+connection_string = os.environ.get("CONNECTION_STRING", "postgresql://user:pass@localhost:5432/warehouse_db")
+port = int(os.environ.get("PORT", 5000))
 
 app = Flask(__name__)
 CORS(app)
@@ -106,4 +104,4 @@ def get_forecast(timestamp):
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    app.run(debug=True, host='0.0.0.0', port=port)
