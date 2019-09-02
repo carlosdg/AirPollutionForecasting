@@ -4,6 +4,11 @@
 import bulmaCalendar from "bulma-calendar/dist/js/bulma-calendar.min.js";
 
 /**
+ * Common
+ */
+const { API_BASE_URL } = process.env;
+
+/**
  * Hamburger button
  */
 const hamburgerButton = document.querySelector(".burger");
@@ -42,10 +47,10 @@ const prev = document.getElementById("pagination-prev");
 const next = document.getElementById("pagination-next");
 
 function fillMeasuresTable({ variable, numberItems, offset }) {
-  const uri = `http://localhost:5000/apf/api/v1.0/measures/${variable}/${numberItems}/${offset}`;
+  const url = `${API_BASE_URL}/apf/api/v1.0/measures/${variable}/${numberItems}/${offset}`;
   measuresContainer.innerHTML = "Loading...";
 
-  return fetch(uri)
+  return fetch(url)
     .then(res => res.json())
     .then(data => {
       measuresContainer.innerHTML = "";
@@ -67,21 +72,36 @@ function fillMeasuresTable({ variable, numberItems, offset }) {
         row.appendChild(data);
         measuresContainer.appendChild(row);
       });
+    })
+    .catch(() => {
+      measuresContainer.innerHTML = "Error";
     });
 }
 
 function fillMeasureVariableSelect() {
-  return fetch("http://localhost:5000/apf/api/v1.0/meta")
+  return fetch(`${API_BASE_URL}/apf/api/v1.0/meta`)
     .then(res => res.json())
     .then(data => {
       selectVariable.innerHTML = "";
+
       data.measure_names.forEach(name => {
         const option = document.createElement("option");
+
         option.value = name;
         option.innerText = name;
 
         selectVariable.appendChild(option);
       });
+    })
+    .catch(() => {
+      selectVariable.innerHTML = "";
+
+      const option = document.createElement("option");
+      option.value = "Error";
+      option.innerText = "Error";
+
+      selectVariable.appendChild(option);
+      selectVariable.disabled = true;
     });
 }
 
