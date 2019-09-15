@@ -22,7 +22,9 @@ After the data was downloaded and the warehouse model defined the next step was 
 
 ### Data Exploration and Machine Learning
 
-The notebooks can be found in the `Software/jupyter/notebooks` folder. The jupyter server is run inside a Docker container, the configuration can be found in `Software/docker-compose.yml`
+The notebooks can be found in the `Software/jupyter/notebooks` folder. The best model trained was <span style="color:forestgreen">Gradient Boosting</span> using <span style="color:forestgreen">PCA</span> to reduce the dimensionality of the data and applying power transformations to reduce the effect of skewness, having the distributions look more like a normal and reduce the impact of outliers.
+
+The jupyter server is run inside a Docker container, the configuration can be found in `Software/docker-compose.yml`
 
 ### Web application
 
